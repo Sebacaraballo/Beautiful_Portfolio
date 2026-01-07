@@ -10,14 +10,17 @@ export const AboutSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Purdue Mechanical Engineer</h3>
+                        <h3 className="text-2xl font-semibold">How I Work</h3>
 
                         <p className="text-muted-foreground">
-                            years of experience, specalize in, technologies I know
+                            I enjoy working on projects where design, analysis, and implementation all matter. 
+                            Whether I’m modeling mechanical components, writing code, or iterating on a system design, I care about understanding how things work end to end. 
+                            I’m especially drawn to environments where attention to detail, ownership, and collaboration are expected, and where designs are meant to leave the screen and become real.
                         </p>
 
                         <p classNamw="text-muted-foreground">
-                            more about me, hobbies, interests
+                            Outside of coursework, I enjoy exploring personal projects that help me learn new tools and technologies. I also like staying active through lifting, basketball, and golf (still working on lowering my handicap). 
+                            Outside of engineering, I’m a big Marvel fan — with Spider-Man as my favorite.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -42,7 +45,8 @@ export const AboutSection = () => {
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg"> Web Development</h4>
                                     <p className="text-muted-foreground">
-                                        Experience in building responsive and dynamic websites using modern web technologies.
+                                       Building clean, responsive interfaces and engineering tooling using modern frameworks, 
+                                       with an emphasis on usability and maintainable code.
                                     </p>
                                 </div>
                             </div>
@@ -53,9 +57,10 @@ export const AboutSection = () => {
                                     <Wrench className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg"> CAD Design</h4>
+                                    <h4 className="font-semibold text-lg"> Mechanical Design</h4>
                                     <p className="text-muted-foreground">
-                                        Designing mechanical components and assemblies using industry-standard CAD software.
+                                        Designing and iterating mechanical components and assemblies 
+                                        with attention to manufacturability, tolerances, and real-world constraints.
                                     </p>
                                 </div>
                             </div>
@@ -66,9 +71,10 @@ export const AboutSection = () => {
                                     <Briefcase className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg"> Project Management</h4>
+                                    <h4 className="font-semibold text-lg"> Project Ownership</h4>
                                     <p className="text-muted-foreground">
-                                        Skilled in leading teams and managing projects to successful completion within deadlines.
+                                        Taking responsibility for projects from concept through execution, 
+                                        coordinating across disciplines to meet technical and time constraints.
                                     </p>
                                 </div>
                             </div>

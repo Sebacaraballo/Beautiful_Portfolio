@@ -2,30 +2,41 @@ import { useState } from "react";
 import { cn } from "../lib/utils";
 
 const skills = [
-    //frontend
-    {name: "HTML/CSS", level: 95, category: "frontend"},
-    {name: "JavaScript", level: 85, category: "frontend"},
-    {name: "React", level: 85, category: "frontend"},
-    {name: "TypeScript", level: 85, category: "frontend"},
-    {name: "Tailwind CSS", level: 85, category: "frontend"},
-    {name: "Next.js", level: 75, category: "frontend"},
+  // Programming
+  { name: "HTML/CSS", level: 95, category: "programming" },
+  { name: "JavaScript", level: 100, category: "programming" },
+  { name: "TypeScript", level: 100, category: "programming" },
+  { name: "React", level: 85, category: "programming" },
+  { name: "Next.js", level: 75, category: "programming" },
+  { name: "Tailwind CSS", level: 100, category: "programming" },
+  { name: "Node.js", level: 70, category: "programming" },
+  { name: "Vite", level: 95, category: "programming" },
 
-    //backend
-    {name: "Node.js", level: 70, category: "backend"},
+  // Technical Skills (cross-discipline tools)
+  { name: "Git/GitHub", level: 100, category: "technical skills" },
+  { name: "Docker", level: 100, category: "technical skills" },
+  { name: "VS Code", level: 100, category: "technical skills" },
+  { name: "Excel", level: 85, category: "technical skills" },
+  { name: "Figma", level: 85, category: "technical skills" },
 
-    //Tools
-    {name: "Git/GitHub", level: 95, category: "tools"},
-    {name: "VS Code", level: 90, category: "tools"},
-    {name: "Figma", level: 80, category: "tools"},
-    {name: "Docker", level: 90, category: "tools"},
+  // CAD & Manufacturing
+  { name: "Onshape", level: 85, category: "cad & manufacturing" },
+  { name: "Fusion 360", level: 75, category: "cad & manufacturing" },
+  { name: "Siemens NX", level: 100, category: "cad & manufacturing" },
+  { name: "Machining", level: 80, category: "cad & manufacturing" },
+  { name: "Laser Cutting", level: 90, category: "cad & manufacturing" },
+  { name: "3D Printing", level: 85, category: "cad & manufacturing" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
-
+const categories = ["all", "programming", "technical skills", "cad & manufacturing"];
 
 
 export const SkillsSection = () => {
-        const [activeCategory, setActiveCategory] = useState("all");
+    const [activeCategory, setActiveCategory] = useState("all");
+
+    const filteredSkills = skills.filter(
+        (skill) => activeCategory === "all" || skill.category === activeCategory
+    );
     return (
         <section 
             id="skills" 
@@ -54,8 +65,11 @@ export const SkillsSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {skills.map((skill, key) => (
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                    {filteredSkills.map((skill, key) => (
+                        <div 
+                            key={key} 
+                            className="bg-card p-6 rounded-lg shadow-xs card-hover"
+                        >
                             <div className="text-l mb-4">
                                 <h3 className="font-semibold text-lg">
                                     {skill.name}
