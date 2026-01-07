@@ -5,8 +5,8 @@ const projects = [
         id: 1,
         title: "Portfolio Website",
         description: "A personal portfolio website to showcase my projects and skills.",
-        imageUrl: "/projects/project1.png",
-        tags: ["React, Tailwind CSS, JavaScript"],
+        imageUrl: "/projects/portfolio-website.png",
+        tags: ["React", "Tailwind CSS", "JavaScript"],
         demoUrl: "#",
         githubUrl: "#",
     }
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
                             </p>
 
                             <div className="flex justify-between items-center">
-                                <div mclassName="flex space-x-3">
+                                <div className="flex space-x-3">
                                     <a 
                                         href={project.demoUrl} 
                                         target="_blank"
