@@ -16,10 +16,11 @@ export const NavBar = () => {
 
         useEffect(() => {
             const handleScroll = () => {
-                setIsScrolled(window.screenY > 10);
+                setIsScrolled(window.scrollY > 10);
             };
 
             window.addEventListener("scroll", handleScroll);
+            handleScroll();
             return () => window.removeEventListener("scroll", handleScroll);
         }, []);
     return (
@@ -36,7 +37,7 @@ export const NavBar = () => {
                 >
                     <span className="relative z-10"> 
                         <span className="text-glow text-foreground"> Sebastian Caraballo's </span>{" "} 
-                        Portfoloio
+                        Portfolio
                     </span>
                 </a>
 
