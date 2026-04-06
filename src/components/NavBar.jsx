@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
     { name: "Home", href: "#hero" },
@@ -52,6 +53,9 @@ export const NavBar = () => {
                             {item.name}
                         </a>
                  ))}
+                    <div className="flex items-center">
+                        <ThemeToggle />
+                    </div>
                 </div>
 
                 {/* mobile nav */}

@@ -2,44 +2,85 @@ import { useState } from "react";
 import { cn } from "../lib/utils";
 
 const skills = [
-  // Programming
-  { name: "HTML/CSS", level: 95, category: "programming" },
-  { name: "JavaScript", level: 100, category: "programming" },
-  { name: "TypeScript", level: 100, category: "programming" },
-  { name: "React", level: 85, category: "programming" },
-  { name: "Next.js", level: 75, category: "programming" },
-  { name: "Tailwind CSS", level: 100, category: "programming" },
-  { name: "Node.js", level: 70, category: "programming" },
-  { name: "Vite", level: 95, category: "programming" },
+  // Languages
+  { name: "HTML/CSS", level: 100, category: "languages" },
+  { name: "JavaScript", level: 100, category: "languages" },
+  { name: "TypeScript", level: 100, category: "languages" },
+  { name: "Arduino", level: 100, category: "languages" },
+  { name: "Python", level: 100, category: "languages" },
+  { name: "MATLAB", level: 100, category: "languages" },
+  { name: "C", level: 100, category: "languages" },
+  { name: "C#", level: 100, category: "languages" },
+  { name: "C++", level: 100, category: "languages" },
+  { name: "Java", level: 100, category: "languages" },
+  { name: "SQL", level: 60, category: "languages" },
+  { name: "Julia", level: 50, category: "languages" },
+  { name: "Assembly", level: 50, category: "languages" },
+  { name: "R", level: 40, category: "languages" },
 
-  // Technical Skills (cross-discipline tools)
-  { name: "Git/GitHub", level: 100, category: "technical skills" },
-  { name: "Docker", level: 100, category: "technical skills" },
-  { name: "VS Code", level: 100, category: "technical skills" },
-  { name: "Excel", level: 85, category: "technical skills" },
-  { name: "Figma", level: 85, category: "technical skills" },
+  // Technologies
+  { name: "React JS", level: 100, category: "technologies" },
+  { name: "Node.js", level: 100, category: "technologies" },
+  { name: "Vite", level: 100, category: "technologies" },
+  { name: "Next.js", level: 100, category: "technologies" },
+  { name: "Tailwind", level: 100, category: "technologies" },
+  { name: "GitHub", level: 100, category: "technologies" },
+  { name: "Docker", level: 100, category: "technologies" },
+  { name: "VS Code", level: 100, category: "technologies" },
+  { name: "Claude Code", level: 100, category: "technologies" },
+  { name: "MS Office Suite", level: 100, category: "technologies" },
+  { name: "Figma", level: 100, category: "technologies" },
+  { name: "TensorFlow", level: 65, category: "technologies" },
+  { name: "AWS", level: 50, category: "technologies" },
+  { name: "Firebase", level: 25, category: "technologies" },
+  { name: "Netlify", level: 20, category: "technologies" },
+  { name: "Flux", level: 30, category: "technologies" },
+  { name: "Onshape", level: 100, category: "technologies" },
+  { name: "Fusion 360", level: 100, category: "technologies" },
+  { name: "Siemens NX", level: 100, category: "technologies" },
+  { name: "AutoCAD", level: 75, category: "technologies" },
+  { name: "CATIA", level: 10, category: "technologies" },
+  { name: "Jira", level: 55, category: "technologies" },
+  { name: "MeshMixer", level: 40, category: "technologies" },
+  { name: "Finite Element Analysis", level: 30, category: "technologies" },
 
-  // CAD & Manufacturing
-  { name: "Onshape", level: 85, category: "cad & manufacturing" },
-  { name: "Fusion 360", level: 75, category: "cad & manufacturing" },
-  { name: "Siemens NX", level: 100, category: "cad & manufacturing" },
-  { name: "Machining", level: 80, category: "cad & manufacturing" },
-  { name: "Laser Cutting", level: 90, category: "cad & manufacturing" },
-  { name: "3D Printing", level: 85, category: "cad & manufacturing" },
+  // Equipment
+  { name: "Bandsaw", level: 100, category: "equipment" },
+  { name: "CNC Mill", level: 100, category: "equipment" },
+  { name: "Drill Press", level: 100, category: "equipment" },
+  { name: "Solder", level: 100, category: "equipment" },
+  { name: "Calipers", level: 100, category: "equipment" },
+  { name: "Micrometers", level: 100, category: "equipment" },
+  { name: "Raspberry Pi", level: 100, category: "equipment" },
+  { name: "DAQ Systems", level: 100, category: "equipment" },
+  { name: "Digital Multimeters", level: 100, category: "equipment" },
+  { name: "Oscilloscopes", level: 100, category: "equipment" },
+  { name: "3D Printing", level: 100, category: "equipment" },
+  { name: "Laser Cutting", level: 100, category: "equipment" },
+  { name: "Flow Meters", level: 100, category: "equipment" },
+  { name: "PCB Assembly", level: 100, category: "equipment" },
+  { name: "System Wiring", level: 100, category: "equipment" },
 ];
 
-const categories = ["all", "programming", "technical skills", "cad & manufacturing"];
+const categories = ["all", "languages", "technologies", "equipment"];
 
 
 export const SkillsSection = () => {
-    const [activeCategory, setActiveCategory] = useState("all");
+    const [activeCategory, setActiveCategory] = useState(null);
 
-    const filteredSkills = skills.filter(
-        (skill) => activeCategory === "all" || skill.category === activeCategory
-    );
+    const filteredSkills = activeCategory === null
+        ? []
+        : skills.filter(
+            (skill) => activeCategory === "all" || skill.category === activeCategory
+          );
+
+    const handleCategoryClick = (category) => {
+        setActiveCategory((prev) => (prev === category ? null : category));
+    };
+
     return (
-        <section 
-            id="skills" 
+        <section
+            id="skills"
             className="py-24 px-4 relative bg-secondary"
         >
             <div className="container mx-auto max-w-5xl">
@@ -49,13 +90,13 @@ export const SkillsSection = () => {
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category, key) => (
-                        <button 
-                            key={key} 
-                            onClick={() => setActiveCategory(category)}
+                        <button
+                            key={key}
+                            onClick={() => handleCategoryClick(category)}
                             className={cn(
                                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                                activeCategory === category 
-                                ? "bg-primary text-primary-foreground" 
+                                activeCategory === category
+                                ? "bg-primary text-primary-foreground"
                                 : "bg-secondary/70 text-foreground hover:bd-secondary"
                             )}
                         >
@@ -64,6 +105,7 @@ export const SkillsSection = () => {
                     ))}
                 </div>
 
+                {activeCategory !== null && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
                         <div 
@@ -88,6 +130,7 @@ export const SkillsSection = () => {
                         </div>
                     ))}
                 </div>
+                )}
             </div>
         </section>
     );

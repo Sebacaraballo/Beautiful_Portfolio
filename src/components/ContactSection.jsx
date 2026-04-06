@@ -79,7 +79,7 @@ export const ContactSection = () => {
                                 <div className="">
                                     <h4 className="font-medium"> Location</h4>
                                     <a className="text-muted-foreground hover:text-primary transition-colors">
-                                        West Lafayette, IN, USA
+                                        Miami, FL, USA
                                     </a>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ export const ContactSection = () => {
                                 <a href="https://www.linkedin.com/in/sebastian-caraballo06/" target="_blank">
                                     <Linkedin />
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="https://www.instagram.com/sebcaraballo" target="_blank">
                                     <Instagram />
                                 </a>
                             </div>

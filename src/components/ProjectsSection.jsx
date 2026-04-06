@@ -1,4 +1,5 @@
 import { ExternalLink, Github, ArrowRight} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
     {
@@ -6,8 +7,76 @@ const projects = [
         title: "Portfolio Website",
         description: "A personal portfolio website to showcase my projects and skills.",
         imageUrl: "/projects/portfolio-website.png",
-        tags: ["React", "Tailwind CSS", "JavaScript"],
-        demoUrl: "#",
+        tags: ["Purdue", "Personal"],
+        demoUrl: "/projects/1",
+        githubUrl: "#",
+    },
+    {
+        id: 2,
+        title: "FRC Robot",
+        description: "Designed and built a competitive robot for the FIRST Robotics Competition.",
+        imageUrl:" ",
+        tags: ["Highschool", "Robotics"],
+        demoUrl: "/projects/2",
+        githubUrl: "#",
+    },
+    {
+        id: 3, 
+        title: "Published Research Papers",
+        description: "Conducted research in the field of biomedical engineering to determine more cost efficient methods of operations at Western New York Urology Associates.",
+        imageUrl: " ",
+        tags: ["Highschool", "Research"],
+        demoUrl: "/projects/3",
+    },
+    {
+        id: 4,
+        title: "Turbo Jet",
+        description: "Designed, built, and tested a turbo jet engine with PURPL.",
+        imageUrl: " ",
+        tags: ["Purdue", "Hardware"],
+        demoUrl: "/projects/4",
+    },
+    {
+        id: 5,
+        title: "MFET 16300 Projects",
+        description: "All the CAD assignments and projects from my MFET 16300 course at Purdue.",
+        imageUrl: " ",
+        tags: ["Purdue", "CAD"],
+        demoUrl: "/projects/5",
+    },
+    {
+        id: 6,
+        title: "Arduino Milestone Projects",
+        description: "A collection of projects built using Arduino.",
+        imageUrl: " ",
+        tags: ["Purdue", "Arduino"],
+        demoUrl: "/projects/6",
+        githubUrl: "#",
+    },
+    {
+        id: 7,
+        title: "ME23900 Projects",
+        description: "All the python assignments from my Data Science course at Purdue.",
+        imageUrl: " ",
+        tags: ["Purdue", "Python"],
+        demoUrl: "/projects/7",
+        githubUrl: "#",
+    },
+    {
+        id: 8,
+        title: "Vlachos Research Group",
+        description: "Research applying Mechanical Engineering principles in the biomedical field at Purude",
+        imageUrl: " ",
+        tags: ["Purdue", "Research"],
+        demoUrl: "/projects/8",
+    },
+    {
+        id: 9,
+        title: "AI Nutrition Start-up",
+        description: "An unamed (for now) start-up that uses AI to provide personalized nutrition plans and meal recommendations.",
+        imageUrl: " ",
+        tags: ["Personal", "AI", "Start-up"],
+        demoUrl: "/projects/9",
         githubUrl: "#",
     }
 ]
@@ -59,13 +128,9 @@ export const ProjectsSection = () => {
 
                             <div className="flex justify-between items-center">
                                 <div className="flex space-x-3">
-                                    <a 
-                                        href={project.demoUrl} 
-                                        target="_blank"
-                                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                    > 
+                                    <Link to={project.demoUrl} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                         <ExternalLink size={20}/>
-                                    </a>
+                                    </Link>
                                     <a 
                                         href={project.githubUrl} 
                                         target="_blank"
