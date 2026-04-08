@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -12,6 +13,8 @@ const navItems = [
 ];
 
 export const NavBar = () => {
+        const location = useLocation();
+        const prefix = location.pathname === "/" ? "" : "/";
         const[isScrolled, setIsScrolled] = useState(false);
         const[isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -32,9 +35,9 @@ export const NavBar = () => {
             )}
         >
             <div className="container flex items-center justify-between pr-15">
-                <a 
+                <a
                     className="text-xl font-bold text-primary flex items-center"
-                    href="#hero"
+                    href={`${prefix}#hero`}
                 >
                     <span className="relative z-10"> 
                         <span className="text-glow text-foreground"> Sebastian Caraballo's </span>{" "} 
@@ -45,14 +48,14 @@ export const NavBar = () => {
                 {/* desktop nav */}
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
-                        <a 
-                            key={key} 
-                            href={item.href} 
+                        <a
+                            key={key}
+                            href={`${prefix}${item.href}`}
                             className="text-foreground/80 hover:text-primary transition-colors duration-300"
                         >
                             {item.name}
                         </a>
-                 ))}
+                    ))}
                     <div className="flex items-center">
                         <ThemeToggle />
                     </div>
@@ -78,9 +81,9 @@ export const NavBar = () => {
                 >
                     <div className="flex flex-col space-y-8 text-xl">
                         {navItems.map((item, key) => (
-                            <a 
-                                key={key} 
-                                href={item.href} 
+                            <a
+                                key={key}
+                                href={`${prefix}${item.href}`}
                                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                                 onClick={() => setIsMenuOpen(false)}
                             >
