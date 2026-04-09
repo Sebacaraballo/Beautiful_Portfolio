@@ -21,20 +21,19 @@ export const HeroSection = () => {
                     </h1>
 
                     <p className="text-lg md: text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4"> 
-                        I am a sophomore at 
+                        I’m a sophomore at
                         {" "}
                         <a
-                            href="https://www.purdue.edu/" 
-                            target="_blank" 
+                            href="https://www.purdue.edu/"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="font-semibold text-foreground hover:text-primary transition-colors"
                         >
                             Purdue University
-                        </a> 
+                        </a>
                         {" "}
-                        studying Mechanical Engineering while pursuing a minor in Computer Science. 
-                        I’m interested in robotics and automation, and I enjoy working on engineering problems 
-                        that sit across multiple technical fields and carry through to real-world applications.
+                        studying Mechanical Engineering with a minor in Computer Science.
+                        I’m into robotics and automation, and I like working on problems that cross different fields and actually get built.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">

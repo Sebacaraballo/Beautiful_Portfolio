@@ -5,7 +5,7 @@ const projects = [
     {
         id: 1,
         title: "Portfolio Website",
-        description: "A personal portfolio website to showcase my projects and skills.",
+        description: "The site you're on right now.",
         imageUrl: "/projects/portfolio-website.png",
         tags: ["Purdue", "Personal"],
         demoUrl: "/projects/1",
@@ -14,7 +14,7 @@ const projects = [
     {
         id: 2,
         title: "FRC Team",
-        description: "Designed and built a competitive robot for the FIRST Robotics Competition.",
+        description: "Designed and built a competition robot with my high school robotics team.",
         imageUrl:"/projects/PortfolioFRC_Front.jpg",
         tags: ["Highschool", "Robotics"],
         demoUrl: "/projects/2",
@@ -22,7 +22,7 @@ const projects = [
     {
         id: 3,
         title: "WNYUA Research",
-        description: "My time as a research assistant at Western New York Urology Associates.",
+        description: "Research assistant at a urology practice in Western New York.",
         imageUrl: "/projects/WNYUA_FRONT.jpg",
         tags: ["Highschool", "Research"],
         demoUrl: "/projects/3",
@@ -30,7 +30,7 @@ const projects = [
     {
         id: 4,
         title: "PURPL",
-        description: "Designed, built, and tested a turbo jet engine with PURPL.",
+        description: "Working on Purdue's only undergraduate air-breathing propulsion project.",
         imageUrl: "/projects/Screenshot 2026-04-08 101218.png",
         tags: ["Purdue", "Club"],
         demoUrl: "/projects/4",
@@ -38,7 +38,7 @@ const projects = [
     {
         id: 5,
         title: "MFET 16300 Projects",
-        description: "All the CAD assignments and projects from my MFET 16300 course at Purdue.",
+        description: "CAD assignments from my MFET 16300 course at Purdue, ending in a fully assembled model engine.",
         imageUrl: "/projects/MFET1.jpg",
         tags: ["Purdue", "Classwork"],
         demoUrl: "/projects/5",
@@ -46,7 +46,7 @@ const projects = [
     {
         id: 6,
         title: "Arduino Milestone Projects",
-        description: "A collection of projects built using Arduino.",
+        description: "A few Arduino projects from my embedded systems coursework at Purdue.",
         imageUrl: "/projects/ArudinoCover.jpg",
         tags: ["Purdue", "Personal"],
         demoUrl: "/projects/6",
@@ -55,7 +55,7 @@ const projects = [
     {
         id: 7,
         title: "ME23900 Projects",
-        description: "All the python assignments from my Data Science course at Purdue.",
+        description: "Python homework from my data science course at Purdue.",
         imageUrl: "/projects/ME2390 Cover.jpg",
         tags: ["Purdue", "Classwork"],
         demoUrl: "/projects/7",
@@ -64,7 +64,7 @@ const projects = [
     {
         id: 8,
         title: "Vlachos Research Group",
-        description: "Research applying Mechanical Engineering principles in the biomedical field at Purdue.",
+        description: "Cardiovascular fluid dynamics research at Purdue.",
         imageUrl: "/projects/VlachosCover1.jpg",
         tags: ["Purdue", "Research"],
         demoUrl: "/projects/8",
@@ -72,7 +72,7 @@ const projects = [
     {
         id: 9,
         title: "AI Nutrition Start-up",
-        description: "An unamed (for now) start-up that uses AI to provide personalized nutrition plans and meal recommendations.",
+        description: "An unnamed start-up using AI for personalized nutrition. More coming soon.",
         imageUrl: "/projects/StartupPlaceholder.jpg",
         tags: ["Personal", "AI", "Start-up"],
         demoUrl: "/projects/9",

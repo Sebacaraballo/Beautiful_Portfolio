@@ -63,19 +63,19 @@ export const NavBar = () => {
 
                 {/* mobile nav */}
 
-                <button onClick={() => setIsMenuOpen((prev) => !prev)} 
-                    className="md:hidden p-2 text-foreground z-50"
+                <button onClick={() => setIsMenuOpen((prev) => !prev)}
+                    className="md:hidden p-2 text-foreground z-[55] relative"
                     aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
                 > 
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} /> } 
                 </button>
 
-                <div 
+                <div
                     className={cn(
-                        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-                        "transition-all duration-300 md:hidden",
-                        isMenuOpen 
-                            ? "opacity-100 pointer-events-auto" 
+                        "fixed inset-0 bg-background z-[45] flex flex-col items-center justify-center",
+                        "transition-opacity duration-300 md:hidden",
+                        isMenuOpen
+                            ? "opacity-100 pointer-events-auto"
                             : "opacity-0 pointer-events-none"
                     )}
                 >
@@ -90,6 +90,9 @@ export const NavBar = () => {
                                 {item.name}
                             </a>
                         ))}
+                        <div className="flex justify-center pt-4">
+                            <ThemeToggle />
+                        </div>
                     </div>
                 </div>
             </div>

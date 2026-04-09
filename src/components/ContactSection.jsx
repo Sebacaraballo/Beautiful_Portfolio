@@ -54,9 +54,8 @@ export const ContactSection = () => {
                 </h2> 
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    Have a project in mind or just want to say hello? 
-                    Feel free to reach out via email or connect on social media. 
-                    I'm always open to discussing new opportunities and collaborations.
+                    Have something you want to talk about, or just want to say hi?
+                    Reach out anytime. I'm always open to hearing about new ideas.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

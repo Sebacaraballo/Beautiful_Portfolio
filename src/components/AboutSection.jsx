@@ -13,14 +13,16 @@ export const AboutSection = () => {
                         <h3 className="text-2xl font-semibold">How I Work</h3>
 
                         <p className="text-muted-foreground">
-                            I enjoy working on projects where design, analysis, and implementation all matter. 
-                            Whether I’m modeling mechanical components, writing code, or iterating on a system design, I care about understanding how things work end to end. 
-                            I’m especially drawn to environments where attention to detail, ownership, and collaboration are expected, and where designs are meant to leave the screen and become real.
+                            I like projects where I have to think about more than one thing at a time.
+                            Modeling a part, writing code, figuring out how a system fits together.
+                            What matters to me is actually understanding how something works, not just getting an answer.
+                            I do my best work when what I’m building is meant to eventually exist in the real world.
                         </p>
 
-                        <p classNamw="text-muted-foreground">
-                            Outside of coursework, I enjoy exploring personal projects that help me learn new tools and technologies. I also like staying active through lifting, basketball, and golf (still working on lowering my handicap). 
-                            Outside of engineering, I’m a big Marvel fan — with Spider-Man as my favorite.
+                        <p className="text-muted-foreground">
+                            Outside of class, I’m usually working on a personal project or picking up something new.
+                            I stay active through lifting, basketball, and golf, although I am still working on lowering the handicap.
+                            I'm also a big movie buff, and I try to see as many films as I can in theaters. My favorite movie is The Prestige, but I also have a soft spot for all the Spider-Man movies.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -49,8 +51,7 @@ export const AboutSection = () => {
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg"> Web Development</h4>
                                     <p className="text-muted-foreground">
-                                       Building clean, responsive interfaces and engineering tooling using modern frameworks, 
-                                       with an emphasis on usability and maintainable code.
+                                        I build web interfaces and internal tooling. Clean layouts that work on any screen, code that's easy to come back to later.
                                     </p>
                                 </div>
                             </div>
@@ -63,8 +64,7 @@ export const AboutSection = () => {
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg"> Mechanical Design</h4>
                                     <p className="text-muted-foreground">
-                                        Designing and iterating mechanical components and assemblies 
-                                        with attention to manufacturability, tolerances, and real-world constraints.
+                                        I design parts and assemblies with an eye on how they'll actually be made. Tolerances, material choices, how things fit together in the real world.
                                     </p>
                                 </div>
                             </div>
@@ -77,8 +77,7 @@ export const AboutSection = () => {
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg"> Project Ownership</h4>
                                     <p className="text-muted-foreground">
-                                        Taking responsibility for projects from concept through execution, 
-                                        coordinating across disciplines to meet technical and time constraints.
+                                        I like owning a project from the first idea to the final result. That means coordinating across different teams and making sure things actually get done.
                                     </p>
                                 </div>
                             </div>

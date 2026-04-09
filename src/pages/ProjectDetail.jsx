@@ -61,7 +61,7 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "A personal portfolio website to showcase my projects and skills.",
+    description: "The site you're on right now.",
     tags: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Docker", "Vercel", "GitHub", "HTML"],
     githubUrl: "https://github.com/Sebacaraballo/Beautiful_Portfolio",
     sidebarLabel: "Tech Stack",
@@ -72,14 +72,14 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "As I have gained more experience and refined my skills, I realized the importance of having a personal portfolio to showcase my work and share my journey. This project was a labor of love, allowing me to combine my passion for design and development into a single platform that represents who I am as a person and as an engineer. It is also my first personal project that I have deployed and shared with the world, making it a significant milestone in my journey.",
-          "The design process itself was very fun. I had full creative liberty to experiment with different layouts, color schemes, and interactions. I wanted the site to feel modern and polished, while also reflecting my personality and style. I iterated on the design multiple times, seeking feedback from friends and mentors to ensure that it was both visually appealing and user-friendly. I settled on the space design because my childhood dream was to become an astronaut. While my goals have shifted tremendously, I still will always have a passion and fascination for space and the stars, so I thought it would be a fun theme to incorporate into the design.",
+          "I built this portfolio because I wanted somewhere to put everything I've worked on. As I took on more projects, it made sense to have a place to show them off. This is also the first project I've actually deployed and shared publicly, so that felt like a real milestone.",
+          "Designing it was genuinely fun. I had full freedom on the layout, colors, and interactions. The space theme came from something real: growing up, I wanted to be an astronaut. That dream changed, but the interest in space never really did. So it made sense to work it in.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "This project was a great opportunity for me to learn and grow as a developer. I had experience with React and Tailwind CSS from previous projects, but building a full portfolio website from scratch was a new challenge. I learned how to structure a larger React application, manage state effectively, and create reusable components. I also gained experience with responsive design, ensuring that the site looks great on both desktop and mobile devices. On top of developing my front-end skills, I also got to work in the back-end by setting up a simple API to handle emails. Overall, this project was a great learning experience that allowed me to apply my skills in a real-world context and create something that I am proud of.",
+          "I had used React and Tailwind before, but building a full site from scratch was different. I had to figure out how to structure a bigger React app, keep components clean, and make sure everything looked right on mobile. Setting up the email API was new for me too. I came out of it with a better sense of how everything fits together on a real project.",
         ],
       },
     ],
@@ -87,7 +87,7 @@ const projects = [
   {
     id: 2,
     title: "FRC Robot",
-    description: "Designed and built a competitive robot for the FIRST Robotics Competition.",
+    description: "Designed and built a competition robot with my high school robotics team.",
     tags: ["OnShape", "Java", "Laser Cutter", "3D Printer", "Machining", "Raspberry Pi", "AprilTags"],
     githubUrl: null,
     sidebarLabel: "Tools Used",
@@ -107,22 +107,22 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "Team 5557 — the BB-R8ERS — is my high school robotics team (yes, we were big Star Wars fans). We compete in the FIRST Robotics Competition (FRC), a program where high school teams are given a new game challenge every January and have six weeks to design, build, wire, and program a full-scale robot before heading to regional and world championship events.",
-          "The team is organized into four sub-teams: Mechanical, Electrical, Software, and Business. I joined at the start of my junior year and served as the Mechanical Team Lead — responsible for our CAD workflow in OnShape, coordinating fabrication, and making sure our designs actually survived contact with other robots. I've stayed involved as an active mentor to this day.",
+          "Team 5557, the BB-R8ERS, is my high school robotics team. Yes, we were big Star Wars fans. We compete in the FIRST Robotics Competition, where teams get a new game challenge every January and have six weeks to design, build, wire, and program a full-scale robot. Then you take it to regional and world championship events.",
+          "The team splits into four groups: Mechanical, Electrical, Software, and Business. I joined my junior year as the Mechanical Team Lead. My job was to manage the CAD workflow in OnShape, coordinate fabrication, and make sure our designs could hold up to actual competition. I still mentor the team today.",
         ],
       },
       {
         heading: "Design & Engineering",
         paragraphs: [
-          "The centerpiece of the robot was a multi-stage elevator and end-effector assembly designed to score game pieces at multiple height targets. Every structural component was modeled in OnShape, with assemblies iterated rapidly as constraints evolved during the build season. Weight distribution, center of gravity, and moment arm calculations were all factored into the design to ensure stability during dynamic play.",
-          "Parts were fabricated using a combination of CNC milling, 3D printing, and hand machining. Prototyping was a constant part of the workflow — we tested mechanisms early and often, feeding results back into the CAD model. This tight loop between design and physical testing was one of the most valuable engineering lessons the project reinforced.",
+          "The main mechanism was a multi-stage elevator and end-effector built to score game pieces at different heights. Everything structural was modeled in OnShape and updated constantly as things changed during build season. We ran weight distribution and moment arm calculations to keep the robot stable during fast movements.",
+          "We fabricated parts with CNC milling, 3D printing, and hand machining. Prototyping happened early and often. We'd test a mechanism, find what didn't work, and update the model. That back and forth between design and physical testing is probably the most useful habit I took away from the program.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "FRC was my first real exposure to the full engineering design cycle — from concept to competition — under real time and resource constraints. I deepened my proficiency in OnShape and gained hands-on experience with manufacturing processes I had only read about before. I also grew as a collaborator, learning how to work across mechanical, electrical, and software sub-teams to integrate a system that actually works.",
-          "The six-week build season is intentionally brutal, and I think that's part of the point. It forces you to make decisions with incomplete information, prioritize ruthlessly, and ship. That mindset has carried into every engineering project I've taken on since.",
+          "FRC was my first time going through the full engineering cycle from concept to competition with real time pressure. I got much better at OnShape and got hands-on with manufacturing processes I had only ever read about. I also learned how to actually coordinate with electrical and software teams, not just hand off parts and hope for the best.",
+          "The six-week build season is brutal on purpose. You have to make decisions without all the information, figure out what matters, and actually finish. That mindset has stuck with me on every project since.",
         ],
       },
     ],
@@ -130,7 +130,7 @@ const projects = [
   {
     id: 3,
     title: "WNYUA Research",
-    description: "My time as a research assistant at Western New York Urology Associates.",
+    description: "Research assistant at a urology practice in Western New York.",
     tags: ["Predictive Analytics", "Statistical Analysis", "Clinical Data Modeling", "Data Analysis", "Quantitative Research"],
     githubUrl: null,
     sidebarLabel: "Research Areas",
@@ -146,22 +146,22 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "During high school I had the opportunity to work as a research assistant at Western New York Urology Associates (WNYUA), a urology practice based in Western New York. The goal of the research was to identify more cost-efficient methods of operations within the practice — analyzing patient data, procedural workflows, and resource allocation to find areas where outcomes could be maintained or improved while reducing unnecessary overhead.",
-          "This was my first real exposure to applied research outside of a classroom setting. I worked alongside physicians and administrative staff to collect and interpret data, and ultimately contributed to published findings. The experience gave me a strong appreciation for how engineering thinking — systematic analysis, data-driven decisions, and iterative improvement — applies directly to healthcare operations.",
+          "During high school I worked as a research assistant at Western New York Urology Associates. The goal was to find more cost-efficient ways to run the practice. That meant looking at patient data, procedural workflows, and where resources were being used, then figuring out where things could be trimmed without affecting care.",
+          "This was my first time doing real research outside of school. I worked with doctors and administrative staff to collect and make sense of data, and the work ended up getting published. It showed me that the way engineers think about problems works just as well in healthcare as it does in a lab.",
         ],
       },
       {
         heading: "Methodology",
         paragraphs: [
-          "The research involved gathering and organizing patient procedure records, then applying statistical analysis to identify patterns in cost, time, and outcomes across different treatment protocols. Data was cleaned, categorized, and analyzed to surface meaningful comparisons between approaches, with a focus on cost efficiency without compromising quality of care.",
-          "I collaborated closely with the medical staff to ensure the data being analyzed was interpreted correctly within the clinical context — a challenge that required learning the domain quickly and asking the right questions. The final findings were compiled into a formal paper and abstract submitted for publication.",
+          "We gathered patient procedure records, cleaned the data, and ran statistical analysis to find patterns across different treatment protocols. The focus was on cost and time, looking for cases where outcomes were the same but the approach was more expensive than it needed to be.",
+          "Working with the medical staff was a real challenge because I had to learn the domain fast and ask the right questions to make sure I wasn't misreading the data. Once we had something solid, we wrote it up as a paper and abstract for publication.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "This project taught me that engineering skills are not confined to machines or software — the same analytical mindset applies wherever there are systems to optimize. Working in a medical environment pushed me to communicate clearly with people from a completely different professional background and to translate technical findings into language that was actionable for clinical staff.",
-          "It also introduced me to the rigor of academic research: proper citation, structured methodology, peer review, and the importance of intellectual honesty when data doesn't tell a clean story. Publishing the work made the experience feel real in a way that school projects rarely do.",
+          "The biggest thing I took away was that engineering thinking is useful everywhere. In a medical practice, the same systematic approach to finding inefficiencies applies. I also had to get comfortable explaining technical findings to people with no engineering background, which is something I use constantly now.",
+          "I also got my first real taste of academic research: proper citations, structured methodology, peer review. And the reality that data doesn't always tell a clean story. Getting the work published made it feel real in a way school assignments never do.",
         ],
       },
     ],
@@ -169,7 +169,7 @@ const projects = [
   {
     id: 4,
     title: "PURPL",
-    description: "Designing and testing Purdue's only undergraduate air-breathing propulsion project.",
+    description: "Working on Purdue's only undergraduate air-breathing propulsion project.",
     tags: ["Propulsion", "Turbomachinery", "FEA", "AutoCAD", "Rotor Dynamics", "Thermodynamics"],
     githubUrl: null,
     sidebarLabel: "Focus Areas",
@@ -197,22 +197,22 @@ const projects = [
       {
         heading: "About the Project",
         paragraphs: [
-          "PURPL's turbojet team is developing Purdue's only undergraduate air-breathing propulsion project. At 50 lbf of thrust, the engine is sized to eventually serve as a power plant for medium-sized UAVs. Beyond performance, the engine doubles as a testbed for research into sustainable aviation fuels — investigating propane, hydrogen, and methane as viable alternatives to conventional jet fuel.",
-          "I joined the team drawn by the opportunity to work on real propulsion hardware at the undergraduate level. Few clubs give students the chance to design, analyze, and test something that actually produces thrust — PURPL is one of them.",
+          "PURPL's turbojet team is working on Purdue's only undergraduate air-breathing propulsion project. The engine is designed to produce 50 lbf of thrust, enough to eventually power a medium-sized UAV. It also serves as a testbed for sustainable aviation fuels including propane, hydrogen, and methane.",
+          "I joined because working on actual propulsion hardware as an undergrad doesn't come up often. PURPL is one of the few places where that's possible.",
         ],
       },
       {
         heading: "AIAA SciTech 2026",
         paragraphs: [
-          "The turbojet team presented their work at the 2026 AIAA SciTech Conference in Orlando, FL — one of the largest aerospace conferences in the world, attended by engineers and researchers from leading commercial, governmental, and academic institutions. The team's paper was recognized by AIAA and published through the conference proceedings, providing widespread exposure to the aerospace and defense community.",
-          "Representing Purdue at an AIAA conference as an undergraduate is a significant milestone. Presenting technical work to professionals and researchers from organizations like NASA, Lockheed Martin, and the Air Force Research Laboratory reinforced the importance of communicating engineering clearly and confidently.",
+          "The team presented at the 2026 AIAA SciTech Conference in Orlando, one of the biggest aerospace conferences out there. The paper got published through the conference proceedings and put in front of engineers and researchers from across the industry.",
+          "Getting to represent Purdue at a conference like that as an undergrad meant a lot. Presenting to people from NASA, Lockheed Martin, and AFRL pushed me to really know the work and be able to explain it clearly.",
         ],
       },
       {
         heading: "Design Process",
         paragraphs: [
-          "Turbomachinery design is inherently complex — the three-dimensional geometry of compressor and turbine blades makes computational modeling extremely demanding. Thanks to our sponsor CFTurbo, the team gained access to industry-grade turbomachinery design software that streamlined what would otherwise be an enormously time-consuming process.",
-          "The team completed a full design review this past semester, covering aerodynamic analysis, structural loading, rotor dynamics, and thermal management. Each subsystem required careful iteration to meet the performance targets while staying within the constraints of what can be manufactured and tested by an undergraduate team.",
+          "Turbomachinery design is genuinely hard. The geometry of compressor and turbine blades makes computational modeling extremely demanding. Our sponsor CFTurbo gave the team access to industry-grade software, which made a process that would otherwise take forever much more manageable.",
+          "This past semester the team finished a full design review covering aerodynamics, structural loading, rotor dynamics, and thermal management. Every subsystem needed iteration to hit the performance targets while staying within what an undergraduate team can actually build and test.",
         ],
       },
     ],
@@ -220,7 +220,7 @@ const projects = [
   {
     id: 5,
     title: "MFET 16300 Projects",
-    description: "CAD assignments and projects from my MFET 16300 course at Purdue — culminating in a fully assembled Little Blazer Engine.",
+    description: "CAD assignments from my MFET 16300 course at Purdue, ending in a fully assembled Little Blazer Engine.",
     tags: ["SiemensNX", "CAD", "GD&T", "Assembly", "Teamcenter"],
     githubUrl: null,
     sidebarLabel: "Focus Areas",
@@ -236,15 +236,15 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "MFET 16300 is Purdue's core CAD and engineering documentation course for Mechanical Engineering Technology students. Over the semester, assignments progressed from basic solid modeling to full multi-part assemblies, with each week building on the last. The overarching project across the later weeks was building sub-assemblies that would ultimately come together as a Little Blazer Engine — a classic model engine used in engineering education.",
-          "All modeling was done in OnShape. Assignments covered parametric part design, sketch constraints, revolve and sweep features, shelling, assemblies with mate constraints, and finally Model Based Definition (MBD) — a modern approach to engineering documentation that embeds GD&T annotations directly in the 3D model.",
+          "MFET 16300 is Purdue's core CAD course for Mechanical Engineering Technology students. Assignments started with basic solid modeling and worked up to full multi-part assemblies over the semester. The big project toward the end was building sub-assemblies that came together as a Little Blazer Engine, a classic model engine used in engineering education.",
+          "All modeling was done in OnShape. The assignments covered parametric design, sketch constraints, revolves and sweeps, shelling, assembly mates, and Model Based Definition (MBD). MBD is basically how you embed GD&T directly in a 3D model instead of drawing a 2D print.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "This course built the CAD foundation I use on every mechanical project. The constraint-driven approach to sketching — making sure every sketch is fully defined before extruding — is a habit that prevents a lot of problems downstream. Working through eight weeks of progressively more complex geometry also reinforced how much thought goes into designing parts that are not just correct, but manufacturable and assembleable.",
-          "The assembly weeks were where everything clicked. Seeing parts I had modeled weeks earlier finally mate together — and watching the butterfly valve and cart come to life — made the semester feel cohesive. The MBD week was a glimpse into how industry is moving away from 2D drawings, and a useful reminder that communication of design intent is as important as the design itself.",
+          "This course built the CAD foundation I use on every mechanical project now. Getting in the habit of fully constraining sketches before extruding is the kind of thing that prevents a lot of headaches later. The more complex the geometry got, the more I realized how much thought goes into designing something that can actually be made.",
+          "The assembly weeks were the best part. Seeing parts I had modeled weeks earlier finally come together made the whole semester feel worthwhile. The MBD week was interesting too. Seeing how industry is moving away from 2D drawings made it clear that knowing how to document a design is just as important as making a good one.",
         ],
       },
     ],
@@ -252,7 +252,7 @@ const projects = [
   {
     id: 6,
     title: "Arduino Milestone Projects",
-    description: "A collection of projects built using Arduino, exploring GPIO output and sensor-driven logic.",
+    description: "A few Arduino projects from my embedded systems coursework at Purdue.",
     tags: ["Arduino", "C++", "Embedded Systems", "Breadboards", "Ultrasonic Sensors"],
     githubUrl: "https://github.com/Sebacaraballo/Arduino-Milestones",
     sidebarLabel: "Focus Areas",
@@ -267,13 +267,13 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "These projects were built as milestone assignments in my embedded systems coursework at Purdue, using the Arduino platform to explore physical computing fundamentals. Each milestone introduced a new concept — digital output, timing, and sensor integration — building toward reactive systems that respond to the real world.",
+          "These were milestone assignments from my embedded systems coursework at Purdue. Each one introduced a new concept, starting with digital output, then timing, then sensor integration. The goal each time was a system that reacts to something in the real world.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "Working with Arduino reinforced how much precision matters in embedded systems. Timing in Morse code, distance thresholds in the ultrasonic sensor project, and the relationship between code logic and physical behavior all required careful tuning. These projects were a hands-on introduction to thinking about hardware and software together — a mindset that carries into every engineering project I work on.",
+          "These projects made it clear how much precision matters in embedded work. Getting the timing right for Morse code, tuning the distance threshold on the sensor, figuring out why the physical behavior didn't match the code. All of it required close attention. It was a good introduction to thinking about hardware and software at the same time.",
         ],
       },
     ],
@@ -281,7 +281,7 @@ const projects = [
   {
     id: 7,
     title: "ME23900 Projects",
-    description: "Weekly Python assignments from ME23900 — Data Science for Mechanical Engineers at Purdue.",
+    description: "Python homework from my data science course at Purdue.",
     tags: ["Python", "Data Science", "NumPy", "Matplotlib", "Pandas", "Scikit-learn"],
     githubUrl: "https://github.com/Sebacaraballo/ME239---Data-Science-for-ME",
     sidebarLabel: "Topics Covered",
@@ -296,15 +296,15 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "ME23900 is Purdue's data science course for Mechanical Engineers, taught in Python. Over 16 weeks the course covers everything from Python basics and numerical computing through probability theory, statistical modeling, and machine learning fundamentals. Each week corresponds to a homework assignment that applies the lecture material to real engineering datasets and problems.",
-          "All assignments are in Jupyter Notebook format. The progression mirrors how data science is actually practiced — starting with data handling and visualization, then building toward probability distributions, regression models, and classification algorithms.",
+          "ME23900 is Purdue's data science course for Mechanical Engineers, taught in Python. Over 16 weeks it goes from Python basics all the way to probability theory, statistical modeling, and intro machine learning. Each week has a homework that applies the lecture material to real engineering data.",
+          "All the assignments are in Jupyter Notebooks. The progression actually mirrors how data work gets done in practice. You start by handling and visualizing data, then work your way up to distributions, regression, and classification.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "This course changed how I think about uncertainty and measurement in engineering. Before ME23900, I treated sensor readings and simulation outputs as ground truth. Working through probability theory, distributions, and maximum likelihood estimation made it clear that all engineering data carries inherent uncertainty — and that quantifying it is as important as collecting it in the first place.",
-          "On the practical side, I became comfortable using Python for data analysis: loading and cleaning datasets, building plots that actually communicate something, and fitting models to data. These skills have already carried into research and other coursework.",
+          "This course changed how I think about data in engineering. Before this, I treated sensor readings as ground truth. Going through probability theory and distributions made it obvious that all engineering data has uncertainty built in, and that quantifying it matters just as much as collecting it.",
+          "On the practical side, I got comfortable using Python for real data work. Loading and cleaning datasets, making plots that actually mean something, fitting models. Skills that came up right away in my research and other courses.",
         ],
       },
     ],
@@ -312,7 +312,7 @@ const projects = [
   {
     id: 8,
     title: "Vlachos Research Group",
-    description: "Cardiovascular fluid dynamics research at the intersection of mechanical engineering and biomedical innovation.",
+    description: "Cardiovascular fluid dynamics research at Purdue.",
     tags: ["Biomedical", "Fluid Dynamics", "Additive Manufacturing", "PIV", "Research", "Purdue"],
     githubUrl: null,
     sidebarLabel: "Research Areas",
@@ -339,29 +339,29 @@ const projects = [
       {
         heading: "Overview",
         paragraphs: [
-          "The Vlachos Research Group at Purdue focuses on cardiovascular fluid dynamics — studying how blood flows through the heart and vessels to better understand conditions like heart failure and aneurysms. The research sits at the intersection of mechanical engineering and biomedical innovation, combining experimental fluid mechanics with advanced imaging and fabrication techniques to develop more accurate, non-invasive diagnostic tools.",
-          "I contribute to two sub-teams within the group: the Flow Loop/Benchtop team and the Cardio Fabrication team. Working across both gives me exposure to the full pipeline — from building physical testbeds that simulate human circulation, to fabricating the anatomical models that go inside them.",
+          "The Vlachos Research Group at Purdue studies cardiovascular fluid dynamics. The work is about understanding how blood flows through the heart and vessels, with the goal of improving how we diagnose conditions like heart failure and aneurysms. It combines experimental fluid mechanics with advanced imaging and fabrication.",
+          "I work on two sub-teams: the Flow Loop team and the Cardio Fabrication team. Being on both gives me a view of the full process, from building the physical setups that simulate circulation to making the anatomical models that go inside them.",
         ],
       },
       {
         heading: "Flow Loop / Benchtop Team",
         paragraphs: [
-          "On the Flow Loop team, I help design and build experimental setups that simulate human cardiovascular circulation. These benchtop systems replicate physiological flow conditions — pulsatile pressure waveforms, realistic vessel geometries, and blood-analog fluids — to create a controlled environment for studying cardiovascular behavior outside the body.",
-          "My role involves integrating high-speed imaging with real-time sensors to capture how fluids behave under these conditions. The resulting data supports the development of more accurate computational models and informs surgical planning for patients with complex cardiovascular conditions.",
+          "On the Flow Loop team, I help build experimental setups that simulate how blood moves through the body. These benchtop systems replicate realistic physiological conditions so we can study cardiovascular behavior in a controlled environment.",
+          "My role is integrating high-speed imaging with sensors to capture how the fluid actually behaves. The data feeds into computational models and can inform surgical planning for patients with serious cardiovascular conditions.",
         ],
       },
       {
         heading: "Cardio Fabrication Team",
         paragraphs: [
-          "On the fabrication side, I use additive manufacturing to create high-fidelity, scaled models of biological structures — patient-specific anatomical geometries derived from medical imaging — as well as precision molds for casting transparent, flexible flow phantoms. These models need to be optically clear and dimensionally accurate enough to support particle image velocimetry (PIV) and other advanced flow visualization techniques.",
-          "The fabrication work requires careful attention to material properties, print resolution, and post-processing — the difference between a model that produces clean optical data and one that doesn't often comes down to surface finish and wall thickness on the order of fractions of a millimeter.",
+          "On the fabrication side, I use 3D printing to make scaled models of biological structures derived from medical imaging, along with molds for casting transparent, flexible flow phantoms. These models have to be optically clear and dimensionally accurate enough to work with particle image velocimetry and other visualization techniques.",
+          "It requires a lot of care around material properties, print resolution, and post-processing. Whether a model produces clean optical data or not often comes down to surface finish and wall thicknesses in the fractions of a millimeter range.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "Working in a research lab has fundamentally changed how I approach engineering problems. In a course, the right answer exists and the path to it is structured. In research, you're often the first person to try something — which means your judgment about whether a result is trustworthy is the only check you have. That responsibility has made me a more careful, more thorough engineer.",
-          "I've also gained a deep appreciation for how much engineering goes into enabling discovery. The pumps, sensors, cameras, and fabricated models aren't the research — they're the tools that make the research possible. Building and maintaining those tools well is its own discipline.",
+          "Working in a research lab changed how I approach problems. In a course, the right answer exists and you just need to find it. In research, you're often the first person trying something, so your judgment about whether a result is trustworthy is the main thing standing between good data and bad conclusions. That responsibility makes you more careful.",
+          "I also have a much better appreciation for how much engineering work goes into just making research possible. The pumps, sensors, cameras, and fabricated models aren't the finding. They're what enables the finding. Building and maintaining that infrastructure well is a real skill.",
         ],
       },
     ],
