@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(grep -n \"me2390Weeks\\\\|export const ProjectDetail\\\\|\\\\];$\" \"c:/Users/sebac/OneDrive/Desktop/Portfolio/src/pages/ProjectDetail.jsx\")",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(unzip -o favicon_io.zip)"
     ]
   }
 }
