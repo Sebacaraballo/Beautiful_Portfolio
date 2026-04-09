@@ -28,74 +28,77 @@ export const NavBar = () => {
             return () => window.removeEventListener("scroll", handleScroll);
         }, []);
     return (
-        <nav 
-            className={cn(
-                "fixed w-full z-40 transition-all duration-300", 
-                isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-            )}
-        >
-            <div className="container flex items-center justify-between pr-15">
-                <a
-                    className="text-xl font-bold text-primary flex items-center"
-                    href={`${prefix}#hero`}
-                >
-                    <span className="relative z-10"> 
-                        <span className="text-glow text-foreground"> Sebastian Caraballo's </span>{" "} 
-                        Portfolio
-                    </span>
-                </a>
+        <>
+            <nav
+                className={cn(
+                    "fixed w-full z-[60] transition-all duration-300",
+                    isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+                )}
+            >
+                <div className="container flex items-center justify-between pr-15">
+                    <a
+                        className="text-xl font-bold text-primary flex items-center"
+                        href={`${prefix}#hero`}
+                    >
+                        <span className="relative z-10">
+                            <span className="text-glow text-foreground"> Sebastian Caraballo's </span>{" "}
+                            Portfolio
+                        </span>
+                    </a>
 
-                {/* desktop nav */}
-                <div className="hidden md:flex space-x-8">
-                    {navItems.map((item, key) => (
-                        <a
-                            key={key}
-                            href={`${prefix}${item.href}`}
-                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                        >
-                            {item.name}
-                        </a>
-                    ))}
-                    <div className="flex items-center">
-                        <ThemeToggle />
-                    </div>
-                </div>
-
-                {/* mobile nav */}
-
-                <button onClick={() => setIsMenuOpen((prev) => !prev)}
-                    className="md:hidden p-2 text-foreground z-[55] relative"
-                    aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-                > 
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} /> } 
-                </button>
-
-                <div
-                    className={cn(
-                        "fixed inset-0 bg-background z-[45] flex flex-col items-center justify-center",
-                        "transition-opacity duration-300 md:hidden",
-                        isMenuOpen
-                            ? "opacity-100 pointer-events-auto"
-                            : "opacity-0 pointer-events-none"
-                    )}
-                >
-                    <div className="flex flex-col space-y-8 text-xl">
+                    {/* desktop nav */}
+                    <div className="hidden md:flex space-x-8">
                         {navItems.map((item, key) => (
                             <a
                                 key={key}
                                 href={`${prefix}${item.href}`}
                                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                onClick={() => setIsMenuOpen(false)}
                             >
                                 {item.name}
                             </a>
                         ))}
-                        <div className="flex justify-center pt-4">
+                        <div className="flex items-center">
                             <ThemeToggle />
                         </div>
                     </div>
+
+                    {/* mobile hamburger / close button */}
+                    <button
+                        onClick={() => setIsMenuOpen((prev) => !prev)}
+                        className="md:hidden p-2 text-foreground"
+                        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+                    >
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
+            </nav>
+
+            {/* Mobile full-screen overlay — sibling to nav so it isn't clipped by nav's stacking context */}
+            <div
+                className={cn(
+                    "fixed inset-0 bg-background z-[50] flex flex-col items-center justify-center md:hidden",
+                    "transition-opacity duration-300",
+                    isMenuOpen
+                        ? "opacity-100 pointer-events-auto"
+                        : "opacity-0 pointer-events-none"
+                )}
+            >
+                <div className="flex flex-col space-y-8 text-xl">
+                    {navItems.map((item, key) => (
+                        <a
+                            key={key}
+                            href={`${prefix}${item.href}`}
+                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            {item.name}
+                        </a>
+                    ))}
+                    <div className="flex justify-center pt-4">
+                        <ThemeToggle />
+                    </div>
                 </div>
             </div>
-        </nav>
+        </>
     );
 };

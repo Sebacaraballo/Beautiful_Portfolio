@@ -33,7 +33,8 @@ export const HeroSection = () => {
                         </a>
                         {" "}
                         studying Mechanical Engineering with a minor in Computer Science.
-                        I’m into robotics and automation, and I like working on problems that cross different fields and actually get built.
+                        I’m into robotics and automation, and I like working on problems that cross different fields 
+                        and give me a chance to expand my repertoire.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
