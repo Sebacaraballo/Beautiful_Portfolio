@@ -4,35 +4,34 @@ import { Link } from "react-router-dom";
 const projects = [
     {
         id: 1,
-        title: "Portfolio Website",
-        description: "The site you're on right now.",
-        imageUrl: "/projects/portfolio-website.png",
-        tags: ["Purdue", "Personal"],
-        demoUrl: "/projects/1",
-        githubUrl: "https://github.com/Sebacaraballo/Beautiful_Portfolio",
-    },
-    {
-        id: 2,
-        title: "FRC Team",
-        description: "Designed and built a competition robot with my high school robotics team.",
-        imageUrl:"/projects/PortfolioFRC_Front.jpg",
-        tags: ["Highschool", "Robotics"],
-        demoUrl: "/projects/2",
-    },
-    {
-        id: 3,
-        title: "WNYUA Research",
-        description: "Research assistant at a urology practice in Western New York.",
-        imageUrl: "/projects/WNYUA_FRONT.jpg",
-        tags: ["Highschool", "Research"],
-        demoUrl: "/projects/3",
-    },
-    {
-        id: 4,
         title: "PURPL",
         description: "Working on Purdue's only undergraduate air-breathing propulsion project.",
         imageUrl: "/projects/Screenshot 2026-04-08 101218.png",
         tags: ["Purdue", "Club"],
+        demoUrl: "/projects/1",
+    },
+    {
+        id: 2,
+        title: "Vlachos Research Group",
+        description: "Cardiovascular fluid dynamics research at Purdue.",
+        imageUrl: "/projects/VlachosCover1.jpg",
+        tags: ["Purdue", "Research"],
+        demoUrl: "/projects/2",
+    },
+    {
+        id: 3,
+        title: "FRC Team",
+        description: "Designed and built a competition robot with my high school robotics team.",
+        imageUrl: "/projects/PortfolioFRC_Front.jpg",
+        tags: ["Highschool", "Robotics"],
+        demoUrl: "/projects/3",
+    },
+    {
+        id: 4,
+        title: "WNYUA Research",
+        description: "Research assistant at a urology practice in Western New York.",
+        imageUrl: "/projects/WNYUA_FRONT.jpg",
+        tags: ["Highschool", "Research"],
         demoUrl: "/projects/4",
     },
     {
@@ -63,11 +62,12 @@ const projects = [
     },
     {
         id: 8,
-        title: "Vlachos Research Group",
-        description: "Cardiovascular fluid dynamics research at Purdue.",
-        imageUrl: "/projects/VlachosCover1.jpg",
-        tags: ["Purdue", "Research"],
+        title: "Portfolio Website",
+        description: "The site you're on right now.",
+        imageUrl: "/projects/portfolio-website.png",
+        tags: ["Purdue", "Personal"],
         demoUrl: "/projects/8",
+        githubUrl: "https://github.com/Sebacaraballo/Beautiful_Portfolio",
     },
     {
         id: 9,
@@ -77,7 +77,7 @@ const projects = [
         tags: ["Personal", "AI", "Start-up"],
         demoUrl: "/projects/9",
         githubUrl: "/projects/9",
-    }
+    },
 ]
 
 

@@ -60,114 +60,6 @@ const PeekingEyes = () => {
 const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    description: "The site you're on right now.",
-    tags: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Docker", "Vercel", "GitHub", "HTML"],
-    githubUrl: "https://github.com/Sebacaraballo/Beautiful_Portfolio",
-    sidebarLabel: "Tech Stack",
-    heroImage: "/projects/portfolio-website.png",
-    galleryImages: [],
-    footerVideos: [],
-    sections: [
-      {
-        heading: "Overview",
-        paragraphs: [
-          "I built this portfolio because I wanted somewhere to put everything I've worked on. As I took on more projects, it made sense to have a place to show them off. This is also the first project I've actually deployed and shared publicly, so that felt like a real milestone.",
-          "Designing it was genuinely fun. I had full freedom on the layout, colors, and interactions. The space theme came from something real: growing up, I wanted to be an astronaut. That dream changed, but the interest in space never really did. So it made sense to work it in.",
-        ],
-      },
-      {
-        heading: "What I Learned",
-        paragraphs: [
-          "I had used React and Tailwind before, but building a full site from scratch was different. I had to figure out how to structure a bigger React app, keep components clean, and make sure everything looked right on mobile. Setting up the email API was new for me too. I came out of it with a better sense of how everything fits together on a real project.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "FRC Robot",
-    description: "Designed and built a competition robot with my high school robotics team.",
-    tags: ["OnShape", "Java", "Laser Cutter", "3D Printer", "Machining", "Raspberry Pi", "AprilTags"],
-    githubUrl: null,
-    sidebarLabel: "Tools Used",
-    heroImage: "/projects/FRC_TEAM2.png",
-    galleryImages: [
-      "/projects/FRC_CAD1.jpg",
-      "/projects/FRC_CAD2.jpg",
-      "/projects/PortfolioFRC_Front.jpg",
-    ],
-    footerVideos: [
-      "/projects/FRC_VID1.mov",
-      "/projects/FRC_VID2.mov",
-      "/projects/FRCVID3.MOV",
-    ],
-    footerLabel: "Competition Footage",
-    sections: [
-      {
-        heading: "Overview",
-        paragraphs: [
-          "Team 5557, the BB-R8ERS, is my high school robotics team. Yes, we were big Star Wars fans. We compete in the FIRST Robotics Competition, where teams get a new game challenge every January and have six weeks to design, build, wire, and program a full-scale robot. Then you take it to regional and world championship events.",
-          "The team splits into four groups: Mechanical, Electrical, Software, and Business. I joined my junior year as the Mechanical Team Lead. My job was to manage the CAD workflow in OnShape, coordinate fabrication, and make sure our designs could hold up to actual competition. I still mentor the team today.",
-        ],
-      },
-      {
-        heading: "Design & Engineering",
-        paragraphs: [
-          "The main mechanism was a multi-stage elevator and end-effector built to score game pieces at different heights. Everything structural was modeled in OnShape and updated constantly as things changed during build season. We ran weight distribution and moment arm calculations to keep the robot stable during fast movements.",
-          "We fabricated parts with CNC milling, 3D printing, and hand machining. Prototyping happened early and often. We'd test a mechanism, find what didn't work, and update the model. That back and forth between design and physical testing is probably the most useful habit I took away from the program.",
-        ],
-      },
-      {
-        heading: "What I Learned",
-        paragraphs: [
-          "FRC was my first time going through the full engineering cycle from concept to competition with real time pressure. I got much better at OnShape and got hands-on with manufacturing processes I had only ever read about. I also learned how to actually coordinate with electrical and software teams, not just hand off parts and hope for the best.",
-          "The six-week build season is brutal on purpose. You have to make decisions without all the information, figure out what matters, and actually finish. That mindset has stuck with me on every project since.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "WNYUA Research",
-    description: "Research assistant at a urology practice in Western New York.",
-    tags: ["Predictive Analytics", "Statistical Analysis", "Clinical Data Modeling", "Data Analysis", "Quantitative Research"],
-    githubUrl: null,
-    sidebarLabel: "Research Areas",
-    heroImage: "/projects/WNYUA_FRONT.jpg",
-    galleryImages: [],
-    footerVideos: [],
-    footerLabel: null,
-    publications: [
-      { label: "Research Paper", href: "/projects/WNYUA%20Paper.pdf" },
-      { label: "Abstract", href: "/projects/WNYUA%20Abstract.pdf" },
-    ],
-    sections: [
-      {
-        heading: "Overview",
-        paragraphs: [
-          "During high school I worked as a research assistant at Western New York Urology Associates. The goal was to find more cost-efficient ways to run the practice. That meant looking at patient data, procedural workflows, and where resources were being used, then figuring out where things could be trimmed without affecting care.",
-          "This was my first time doing real research outside of school. I worked with doctors and administrative staff to collect and make sense of data, and the work ended up getting published. It showed me that the way engineers think about problems works just as well in healthcare as it does in a lab.",
-        ],
-      },
-      {
-        heading: "Methodology",
-        paragraphs: [
-          "We gathered patient procedure records, cleaned the data, and ran statistical analysis to find patterns across different treatment protocols. The focus was on cost and time, looking for cases where outcomes were the same but the approach was more expensive than it needed to be.",
-          "Working with the medical staff was a real challenge because I had to learn the domain fast and ask the right questions to make sure I wasn't misreading the data. Once we had something solid, we wrote it up as a paper and abstract for publication.",
-        ],
-      },
-      {
-        heading: "What I Learned",
-        paragraphs: [
-          "The biggest thing I took away was that engineering thinking is useful everywhere. In a medical practice, the same systematic approach to finding inefficiencies applies. I also had to get comfortable explaining technical findings to people with no engineering background, which is something I use constantly now.",
-          "I also got my first real taste of academic research: proper citations, structured methodology, peer review. And the reality that data doesn't always tell a clean story. Getting the work published made it feel real in a way school assignments never do.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
     title: "PURPL",
     description: "Working on Purdue's only undergraduate air-breathing propulsion project.",
     tags: ["Propulsion", "Turbomachinery", "FEA", "AutoCAD", "Rotor Dynamics", "Thermodynamics"],
@@ -213,6 +105,145 @@ const projects = [
         paragraphs: [
           "Turbomachinery design is genuinely hard. The geometry of compressor and turbine blades makes computational modeling extremely demanding. Our sponsor CFTurbo gave the team access to industry-grade software, which made a process that would otherwise take forever much more manageable.",
           "This past semester the team finished a full design review covering aerodynamics, structural loading, rotor dynamics, and thermal management. Every subsystem needed iteration to hit the performance targets while staying within what an undergraduate team can actually build and test.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Vlachos Research Group",
+    description: "Cardiovascular fluid dynamics research at Purdue.",
+    tags: ["Biomedical", "Fluid Dynamics", "Additive Manufacturing", "PIV", "Research", "Purdue"],
+    githubUrl: null,
+    sidebarLabel: "Research Areas",
+    heroImage: "/projects/VlachosCover1.jpg",
+    galleryImages: [],
+    bottomImages: [],
+    footerVideos: [],
+    footerLabel: null,
+    publications: [],
+    vlachosGalleries: {
+      flowLoop: [
+        "/projects/Vlachos1.jpg",
+        "/projects/Vlachos2.jpg",
+        "/projects/Vlachos3.jpg",
+      ],
+      fabrication: [
+        "/projects/Vlachos4.png",
+        "/projects/Vlachos5.png",
+        "/projects/Vlachos6.png",
+        "/projects/Vlachos7.png",
+      ],
+    },
+    sections: [
+      {
+        heading: "Overview",
+        paragraphs: [
+          "The Vlachos Research Group at Purdue studies cardiovascular fluid dynamics. The work is about understanding how blood flows through the heart and vessels, with the goal of improving how we diagnose conditions like heart failure and aneurysms. It combines experimental fluid mechanics with advanced imaging and fabrication.",
+          "I work on two sub-teams: the Flow Loop team and the Cardio Fabrication team. Being on both gives me a view of the full process, from building the physical setups that simulate circulation to making the anatomical models that go inside them.",
+        ],
+      },
+      {
+        heading: "Flow Loop / Benchtop Team",
+        paragraphs: [
+          "On the Flow Loop team, I help build experimental setups that simulate how blood moves through the body. These benchtop systems replicate realistic physiological conditions so we can study cardiovascular behavior in a controlled environment.",
+          "My role is integrating high-speed imaging with sensors to capture how the fluid actually behaves. The data feeds into computational models and can inform surgical planning for patients with serious cardiovascular conditions.",
+        ],
+      },
+      {
+        heading: "Cardio Fabrication Team",
+        paragraphs: [
+          "On the fabrication side, I use 3D printing to make scaled models of biological structures derived from medical imaging, along with molds for casting transparent, flexible flow phantoms. These models have to be optically clear and dimensionally accurate enough to work with particle image velocimetry and other visualization techniques.",
+          "It requires a lot of care around material properties, print resolution, and post-processing. Whether a model produces clean optical data or not often comes down to surface finish and wall thicknesses in the fractions of a millimeter range.",
+        ],
+      },
+      {
+        heading: "What I Learned",
+        paragraphs: [
+          "Working in a research lab changed how I approach problems. In a course, the right answer exists and you just need to find it. In research, you're often the first person trying something, so your judgment about whether a result is trustworthy is the main thing standing between good data and bad conclusions. That responsibility makes you more careful.",
+          "I also have a much better appreciation for how much engineering work goes into just making research possible. The pumps, sensors, cameras, and fabricated models aren't the finding. They're what enables the finding. Building and maintaining that infrastructure well is a real skill.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "FRC Robot",
+    description: "Designed and built a competition robot with my high school robotics team.",
+    tags: ["OnShape", "Java", "Laser Cutter", "3D Printer", "Machining", "Raspberry Pi", "AprilTags"],
+    githubUrl: null,
+    sidebarLabel: "Tools Used",
+    heroImage: "/projects/FRC_TEAM2.png",
+    galleryImages: [
+      "/projects/FRC_CAD1.jpg",
+      "/projects/FRC_CAD2.jpg",
+      "/projects/PortfolioFRC_Front.jpg",
+    ],
+    footerVideos: [
+      "/projects/FRC_VID1.mov",
+      "/projects/FRC_VID2.mov",
+      "/projects/FRCVID3.MOV",
+    ],
+    footerLabel: "Competition Footage",
+    sections: [
+      {
+        heading: "Overview",
+        paragraphs: [
+          "Team 5557, the BB-R8ERS, is my high school robotics team. Yes, we were big Star Wars fans. We compete in the FIRST Robotics Competition, where teams get a new game challenge every January and have six weeks to design, build, wire, and program a full-scale robot. Then you take it to regional and world championship events.",
+          "The team splits into four groups: Mechanical, Electrical, Software, and Business. I joined my junior year as the Mechanical Team Lead. My job was to manage the CAD workflow in OnShape, coordinate fabrication, and make sure our designs could hold up to actual competition. I still mentor the team today.",
+        ],
+      },
+      {
+        heading: "Design & Engineering",
+        paragraphs: [
+          "The main mechanism was a multi-stage elevator and end-effector built to score game pieces at different heights. Everything structural was modeled in OnShape and updated constantly as things changed during build season. We ran weight distribution and moment arm calculations to keep the robot stable during fast movements.",
+          "We fabricated parts with CNC milling, 3D printing, and hand machining. Prototyping happened early and often. We'd test a mechanism, find what didn't work, and update the model. That back and forth between design and physical testing is probably the most useful habit I took away from the program.",
+        ],
+      },
+      {
+        heading: "What I Learned",
+        paragraphs: [
+          "FRC was my first time going through the full engineering cycle from concept to competition with real time pressure. I got much better at OnShape and got hands-on with manufacturing processes I had only ever read about. I also learned how to actually coordinate with electrical and software teams, not just hand off parts and hope for the best.",
+          "The six-week build season is brutal on purpose. You have to make decisions without all the information, figure out what matters, and actually finish. That mindset has stuck with me on every project since.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "WNYUA Research",
+    description: "Research assistant at a urology practice in Western New York.",
+    tags: ["Predictive Analytics", "Statistical Analysis", "Clinical Data Modeling", "Data Analysis", "Quantitative Research"],
+    githubUrl: null,
+    sidebarLabel: "Research Areas",
+    heroImage: "/projects/WNYUA_FRONT.jpg",
+    galleryImages: [],
+    footerVideos: [],
+    footerLabel: null,
+    publications: [
+      { label: "Research Paper", href: "/projects/WNYUA%20Paper.pdf" },
+      { label: "Abstract", href: "/projects/WNYUA%20Abstract.pdf" },
+    ],
+    sections: [
+      {
+        heading: "Overview",
+        paragraphs: [
+          "During high school I worked as a research assistant at Western New York Urology Associates. The goal was to find more cost-efficient ways to run the practice. That meant looking at patient data, procedural workflows, and where resources were being used, then figuring out where things could be trimmed without affecting care.",
+          "This was my first time doing real research outside of school. I worked with doctors and administrative staff to collect and make sense of data, and the work ended up getting published. It showed me that the way engineers think about problems works just as well in healthcare as it does in a lab.",
+        ],
+      },
+      {
+        heading: "Methodology",
+        paragraphs: [
+          "We gathered patient procedure records, cleaned the data, and ran statistical analysis to find patterns across different treatment protocols. The focus was on cost and time, looking for cases where outcomes were the same but the approach was more expensive than it needed to be.",
+          "Working with the medical staff was a real challenge because I had to learn the domain fast and ask the right questions to make sure I wasn't misreading the data. Once we had something solid, we wrote it up as a paper and abstract for publication.",
+        ],
+      },
+      {
+        heading: "What I Learned",
+        paragraphs: [
+          "The biggest thing I took away was that engineering thinking is useful everywhere. In a medical practice, the same systematic approach to finding inefficiencies applies. I also had to get comfortable explaining technical findings to people with no engineering background, which is something I use constantly now.",
+          "I also got my first real taste of academic research: proper citations, structured methodology, peer review. And the reality that data doesn't always tell a clean story. Getting the work published made it feel real in a way school assignments never do.",
         ],
       },
     ],
@@ -311,57 +342,26 @@ const projects = [
   },
   {
     id: 8,
-    title: "Vlachos Research Group",
-    description: "Cardiovascular fluid dynamics research at Purdue.",
-    tags: ["Biomedical", "Fluid Dynamics", "Additive Manufacturing", "PIV", "Research", "Purdue"],
-    githubUrl: null,
-    sidebarLabel: "Research Areas",
-    heroImage: "/projects/VlachosCover1.jpg",
+    title: "Portfolio Website",
+    description: "The site you're on right now.",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Docker", "Vercel", "GitHub", "HTML"],
+    githubUrl: "https://github.com/Sebacaraballo/Beautiful_Portfolio",
+    sidebarLabel: "Tech Stack",
+    heroImage: "/projects/portfolio-website.png",
     galleryImages: [],
-    bottomImages: [],
     footerVideos: [],
-    footerLabel: null,
-    publications: [],
-    vlachosGalleries: {
-      flowLoop: [
-        "/projects/Vlachos1.jpg",
-        "/projects/Vlachos2.jpg",
-        "/projects/Vlachos3.jpg",
-      ],
-      fabrication: [
-        "/projects/Vlachos4.png",
-        "/projects/Vlachos5.png",
-        "/projects/Vlachos6.png",
-        "/projects/Vlachos7.png",
-      ],
-    },
     sections: [
       {
         heading: "Overview",
         paragraphs: [
-          "The Vlachos Research Group at Purdue studies cardiovascular fluid dynamics. The work is about understanding how blood flows through the heart and vessels, with the goal of improving how we diagnose conditions like heart failure and aneurysms. It combines experimental fluid mechanics with advanced imaging and fabrication.",
-          "I work on two sub-teams: the Flow Loop team and the Cardio Fabrication team. Being on both gives me a view of the full process, from building the physical setups that simulate circulation to making the anatomical models that go inside them.",
-        ],
-      },
-      {
-        heading: "Flow Loop / Benchtop Team",
-        paragraphs: [
-          "On the Flow Loop team, I help build experimental setups that simulate how blood moves through the body. These benchtop systems replicate realistic physiological conditions so we can study cardiovascular behavior in a controlled environment.",
-          "My role is integrating high-speed imaging with sensors to capture how the fluid actually behaves. The data feeds into computational models and can inform surgical planning for patients with serious cardiovascular conditions.",
-        ],
-      },
-      {
-        heading: "Cardio Fabrication Team",
-        paragraphs: [
-          "On the fabrication side, I use 3D printing to make scaled models of biological structures derived from medical imaging, along with molds for casting transparent, flexible flow phantoms. These models have to be optically clear and dimensionally accurate enough to work with particle image velocimetry and other visualization techniques.",
-          "It requires a lot of care around material properties, print resolution, and post-processing. Whether a model produces clean optical data or not often comes down to surface finish and wall thicknesses in the fractions of a millimeter range.",
+          "I built this portfolio because I wanted somewhere to put everything I've worked on. As I took on more projects, it made sense to have a place to show them off. This is also the first project I've actually deployed and shared publicly, so that felt like a real milestone.",
+          "Designing it was genuinely fun. I had full freedom on the layout, colors, and interactions. The space theme came from something real: growing up, I wanted to be an astronaut. That dream changed, but the interest in space never really did. So it made sense to work it in.",
         ],
       },
       {
         heading: "What I Learned",
         paragraphs: [
-          "Working in a research lab changed how I approach problems. In a course, the right answer exists and you just need to find it. In research, you're often the first person trying something, so your judgment about whether a result is trustworthy is the main thing standing between good data and bad conclusions. That responsibility makes you more careful.",
-          "I also have a much better appreciation for how much engineering work goes into just making research possible. The pumps, sensors, cameras, and fabricated models aren't the finding. They're what enables the finding. Building and maintaining that infrastructure well is a real skill.",
+          "I had used React and Tailwind before, but building a full site from scratch was different. I had to figure out how to structure a bigger React app, keep components clean, and make sure everything looked right on mobile. Setting up the email API was new for me too. I came out of it with a better sense of how everything fits together on a real project.",
         ],
       },
     ],
