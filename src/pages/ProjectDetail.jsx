@@ -112,7 +112,7 @@ const projects = [
   {
     id: 2,
     title: "Vlachos Research Group",
-    description: "Cardiovascular fluid dynamics research at Purdue.",
+    description: "Cardio Fabrication and Flow Loop teams in the Vlachos Research Group. I led bring-up of a fluidic testbed with DAC/ADC boards and high-fidelity sensors, wrote Python workflows that sync high-speed imaging with sensor data, and 3D-print dissolvable shell molds for casting PDMS vessel models.",
     tags: ["Biomedical", "Fluid Dynamics", "Additive Manufacturing", "PIV", "Research", "Purdue"],
     githubUrl: null,
     sidebarLabel: "Research Areas",
