@@ -20,8 +20,8 @@ export const HeroSection = () => {
                         </span>
                     </h1>
 
-                    <p className="text-lg md: text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4"> 
-                        I’m a sophomore at
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
+                        I'm a junior at
                         {" "}
                         <a
                             href="https://www.purdue.edu/"
@@ -33,8 +33,17 @@ export const HeroSection = () => {
                         </a>
                         {" "}
                         studying Mechanical Engineering with a minor in Computer Science.
-                        I’m into robotics and automation, and I like working on problems that cross different fields 
-                        and give me a chance to expand my repertoire.
+                        I founded{" "}
+                        <a
+                            href="https://fitscript.io"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-foreground hover:text-primary transition-colors"
+                        >
+                            FitScript
+                        </a>
+                        , an AI nutrition coach, and I like building things that cross hardware and software:
+                        web apps, trading systems, drones, and turbojets.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">

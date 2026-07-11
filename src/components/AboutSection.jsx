@@ -13,6 +13,7 @@ export const AboutSection = () => {
                         <h3 className="text-2xl font-semibold">How I Work</h3>
 
                         <p className="text-muted-foreground">
+                            Right now most of my time goes to FitScript, the AI nutrition startup I founded, and my software internship at Algoma in Brooklyn.
                             I like projects where I have to think about more than one thing at a time.
                             Modeling a part, writing code, figuring out how a system fits together.
                             What matters to me is actually understanding how something works, not just getting an answer.
@@ -32,7 +33,7 @@ export const AboutSection = () => {
                             </a>
 
                             <a 
-                                href="/resume/04.5.26_Resume_Base.pdf" 
+                                href="/resume/07.9.26_Resume_v3.pdf"
                                 target="_blank"
                                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                             >
