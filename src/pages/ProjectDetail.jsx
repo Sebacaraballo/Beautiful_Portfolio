@@ -75,7 +75,7 @@ const ImageSlot = ({ src, caption, Icon }) => {
         <img
           src={src}
           alt={caption || ""}
-          className="w-full h-full object-cover"
+          className="w-full h-[460px] object-contain bg-card"
           onError={() => setFailed(true)}
         />
       )}
@@ -436,7 +436,7 @@ const projects = [
       { src: "/projects/fitscript-meal-logging.png", caption: "Meal logging" }, // meal logging with LLM parsing
       { src: "/projects/fitscript-today.png", caption: "Today view" }, // daily Today view
     ],
-    galleryLabel: "Product Screens (coming soon)",
+    galleryLabel: "Product Screens",
     sections: [
       {
         heading: "About the Product",
