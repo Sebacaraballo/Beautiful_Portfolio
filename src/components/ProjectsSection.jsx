@@ -6,7 +6,7 @@ const featuredProjects = [
         id: "fitscript",
         title: "FitScript",
         description: "AI nutrition coach for people managing diabetes and GLP-1 treatment. Founded and built solo in Next.js, TypeScript, and PostgreSQL: an LLM coach with persistent memory, condition-aware meal logging, and retention analytics. In private beta with 60+ users.",
-        imageUrl: "/projects/fitscript-logo.png",
+        imageUrl: "/projects/fitscript-mark-cream.png",
         tags: ["Founder", "AI", "Live Product"],
         link: "/projects/fitscript",
     },
