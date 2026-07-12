@@ -8,7 +8,7 @@ const featuredProjects = [
         description: "AI nutrition coach for people managing diabetes and GLP-1 treatment. Founded and built solo in Next.js, TypeScript, and PostgreSQL: an LLM coach with persistent memory, condition-aware meal logging, and retention analytics. In private beta with 60+ users.",
         imageUrl: "/projects/fitscript-logo.png",
         tags: ["Founder", "AI", "Live Product"],
-        link: "https://fitscript.io",
+        link: "/projects/fitscript",
     },
     {
         id: "earnings-trader",
@@ -16,7 +16,7 @@ const featuredProjects = [
         description: "LLM system that reads SEC 8-K filings and turns earnings language into trade signals: GPT-4o-mini scores sentiment, guidance quality, and risk, then a vectorbt engine backtests every signal against SPY with Sharpe, win rate, and drawdown. Live FastAPI + React dashboard.",
         icon: TrendingUp,
         tags: ["Personal", "AI", "Fintech"],
-        link: "https://trading-bot-ochre-delta.vercel.app/",
+        link: "/projects/earnings-trader",
     },
     {
         id: "algoma",
@@ -24,7 +24,7 @@ const featuredProjects = [
         description: "Software engineering intern, two summers, at an AI platform for real estate feasibility. Built the rent comparables analytics dashboard from Figma prototypes to production: interactive charts with trend lines and dynamic filtering. Now shipping features through ticketed PRs and code review.",
         icon: Building2,
         tags: ["Internship", "Software"],
-        link: "https://www.algoma.co/",
+        link: "/projects/algoma",
     },
     {
         id: 1,
@@ -48,7 +48,7 @@ const featuredProjects = [
         description: "Unmanned Systems team project: a hexacopter that places self-sufficient Meshtastic radio repeaters on water towers to restore communications after natural disasters, partnered with emergency responders in Jefferson County, Florida. I work on drone construction, the payload deployment mechanism, and ArduPilot integration.",
         icon: RadioTower,
         tags: ["Purdue", "Club", "UAV"],
-        link: "https://www.purduensds.org/home-1-1-1",
+        link: "/projects/nsds",
     },
     {
         id: 3,
