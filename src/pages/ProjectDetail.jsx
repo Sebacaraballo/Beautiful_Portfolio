@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink, Salad, TrendingUp, Building2, RadioTower } from "lucide-react";
 import { NavBar } from "../components/NavBar";
 import { StarBackground } from "../components/StarBackground";
 import { MFETWeeks } from "../components/MFETWeeks";
@@ -53,6 +53,54 @@ const PeekingEyes = () => {
           </div>
         </div>
       ))}
+    </div>
+  );
+};
+
+// Renders a real image if one exists at `src`, otherwise falls back to the
+// tag-colored gradient + icon placeholder. Dropping a file at `src` makes the
+// image appear with no code change (the onError swap handles missing files).
+const ImageSlot = ({ src, caption, Icon }) => {
+  const [failed, setFailed] = useState(!src);
+  return (
+    <div className="rounded-lg overflow-hidden shadow-xs border border-border">
+      {failed ? (
+        <div className="w-full aspect-video flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/25 via-primary/10 to-card">
+          {Icon && <Icon className="h-10 w-10 text-primary/70" strokeWidth={1.5} />}
+          {caption && (
+            <span className="text-xs text-muted-foreground px-3 text-center">{caption}</span>
+          )}
+        </div>
+      ) : (
+        <img
+          src={src}
+          alt={caption || ""}
+          className="w-full h-full object-cover"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+};
+
+// Hero banner variant of ImageSlot: full width, taller placeholder.
+const HeroMedia = ({ src, title, Icon }) => {
+  const [failed, setFailed] = useState(!src);
+  if (failed) {
+    return (
+      <div className="w-full h-72 md:h-80 rounded-lg overflow-hidden mb-12 shadow-xs flex items-center justify-center bg-gradient-to-br from-primary/25 via-primary/10 to-card">
+        {Icon && <Icon className="h-20 w-20 text-primary/70" strokeWidth={1.5} />}
+      </div>
+    );
+  }
+  return (
+    <div className="w-full rounded-lg overflow-hidden mb-12 shadow-xs max-h-96">
+      <img
+        src={src}
+        alt={title}
+        className="w-full h-full object-cover"
+        onError={() => setFailed(true)}
+      />
     </div>
   );
 };
@@ -367,6 +415,173 @@ const projects = [
     ],
   },
   {
+    id: "fitscript",
+    title: "FitScript",
+    description: "AI nutrition coach for people managing diabetes and GLP-1 treatment.",
+    tags: ["Founder", "AI", "Full-Stack", "Live Product"],
+    githubUrl: null,
+    sidebarLabel: "Tech Stack",
+    sidebarItems: ["Next.js", "TypeScript", "PostgreSQL", "LLM APIs", "Vercel", "Sentry", "Resend"],
+    externalUrl: "https://fitscript.io",
+    externalLabel: "Visit fitscript.io",
+    placeholderIcon: Salad,
+    // Optional hero banner. Drop a file at this path to replace the placeholder.
+    heroImage: "/projects/fitscript-hero.png",
+    galleryImages: [],
+    footerVideos: [],
+    // App screenshots coming as the beta UI stabilizes. Drop files at these
+    // exact paths to replace the placeholders (no code change needed).
+    gallery: [
+      { src: "/projects/fitscript-coach-chat.png", caption: "Coach chat" }, // conversational coaching view
+      { src: "/projects/fitscript-meal-logging.png", caption: "Meal logging" }, // meal logging with LLM parsing
+      { src: "/projects/fitscript-today.png", caption: "Today view" }, // daily Today view
+    ],
+    galleryLabel: "Product Screens (coming soon)",
+    sections: [
+      {
+        heading: "About the Product",
+        paragraphs: [
+          "FitScript is an AI nutrition coach for people managing diabetes and GLP-1 treatment. A dietitian builds a plan around your body, your condition, and your goals, and remembers you between visits. That costs about $150 a session and there are not nearly enough dietitians. FitScript puts that in your pocket for a fraction of the cost, starting with the people who have the worst options today.",
+          "Most nutrition apps treat everyone the same. A diabetic, someone on a GLP-1, and a keto athlete should get fundamentally different guidance, and the coach should remember what you told it last week. That combination, condition-specific advice plus persistent memory, is the product.",
+        ],
+      },
+      {
+        heading: "What I Built",
+        paragraphs: [
+          "I founded FitScript and built the entire product solo: a Next.js and TypeScript web app on PostgreSQL, with an LLM coach that keeps a persistent profile of each user and stays inside condition-aware guardrails. The app handles conversational coaching, meal logging with LLM parsing, condition-specific meal plans, and grocery lists.",
+        ],
+      },
+      {
+        heading: "Private Beta",
+        paragraphs: [
+          "It is in private beta with 60+ users. I run the beta like an experiment: SQL retention analytics on real meal and conversation data decide what gets built next, and features ship only when usage signals call for them.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "earnings-trader",
+    title: "Earnings Trader",
+    description: "LLM system that reads SEC 8-K filings and turns earnings language into trade signals.",
+    tags: ["Personal", "AI", "Fintech"],
+    githubUrl: "https://github.com/Sebacaraballo/Trading-Bot",
+    sidebarLabel: "Tech Stack",
+    sidebarItems: ["Python", "GPT-4o-mini", "SQLite", "vectorbt", "FastAPI", "React"],
+    externalUrl: "https://trading-bot-ochre-delta.vercel.app/",
+    externalLabel: "Open Live Demo",
+    placeholderIcon: TrendingUp,
+    // Optional hero banner. Drop a file at this path to replace the placeholder.
+    heroImage: "/projects/earnings-trader-hero.png",
+    galleryImages: [],
+    footerVideos: [],
+    // Dashboard screenshots. Drop files at these exact paths to replace placeholders.
+    gallery: [
+      { src: "/projects/earnings-trader-dashboard.png", caption: "Dashboard overview" }, // live FastAPI + React dashboard
+      { src: "/projects/earnings-trader-backtest.png", caption: "Backtest results" }, // vectorbt backtest vs SPY
+    ],
+    galleryLabel: "Dashboard (coming soon)",
+    sections: [
+      {
+        heading: "About the Project",
+        paragraphs: [
+          "Most trading bots react to price movements. Earnings Trader reads what companies actually say. The system pulls 8-K filings from SEC EDGAR and earnings data from Yahoo Finance, then uses GPT-4o-mini to score each filing for sentiment, guidance quality, and risk flags. Every scored signal is stored and backtested.",
+        ],
+      },
+      {
+        heading: "Backtesting",
+        paragraphs: [
+          "The backtesting engine is built on vectorbt and measures every signal against an SPY benchmark: Sharpe ratio, win rate, average return per trade, and max drawdown across a 34-trade backtest covering 10 tickers and 50+ signals. Results publish to a live FastAPI and React dashboard.",
+        ],
+      },
+      {
+        heading: "Honest Results",
+        paragraphs: [
+          "The honest current result: the strategy trails SPY. That is the point of the system. The backtest diagnosed exactly why (naive equal-weight position sizing produces excessive drawdown), and the current work is transaction-cost modeling and Kelly-criterion position sizing to fix it. A backtest that flatters itself is worthless. One that tells you what is broken is a tool.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "algoma",
+    title: "Algoma",
+    description: "AI platform that compresses real estate feasibility studies into a fast search.",
+    tags: ["Internship", "Software", "Startup"],
+    githubUrl: null,
+    sidebarLabel: "Tech Stack",
+    sidebarItems: ["TypeScript", "React", "Figma", "Jira"],
+    externalUrl: "https://www.algoma.co/",
+    externalLabel: "Visit Algoma",
+    placeholderIcon: Building2,
+    // Optional hero banner. Drop a file at this path to replace the placeholder.
+    heroImage: "/projects/algoma-hero.png",
+    galleryImages: [],
+    footerVideos: [],
+    // Rent comparables dashboard screenshot (pending company approval to publish).
+    // Drop a file at this exact path to replace the placeholder.
+    gallery: [
+      { src: "/projects/algoma-rent-comparables.png", caption: "Rent comparables dashboard" },
+    ],
+    galleryLabel: "Work (pending approval)",
+    sections: [
+      {
+        heading: "About Algoma",
+        paragraphs: [
+          "Algoma is a Brooklyn startup using AI to compress real estate feasibility studies from weeks of consultant work into a fast search. I have interned there two summers.",
+        ],
+      },
+      {
+        heading: "The Work",
+        paragraphs: [
+          "Summer 2025: built parts of the client-facing web platform with a focus on front-end architecture, including interactive analytics features that let users filter and compare up to 10 properties from hundreds. My main project was the rent comparables dashboard: I owned the UI and data visualization design, prototyped it in Figma, and built the page in production. It converts comparable rental data into interactive charts with trend lines and dynamic filtering, and was used in client demos.",
+          "Summer 2026: back in a deeper engineering role, shipping production features and UX fixes to the React property-discovery platform through Jira-ticketed pull requests and code review.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "nsds",
+    title: "Rapid Radio Development",
+    description: "A hexacopter that places self-sufficient Meshtastic radio repeaters to restore communications after disasters.",
+    tags: ["Purdue", "Club", "UAV"],
+    githubUrl: null,
+    sidebarLabel: "Systems",
+    sidebarItems: ["ArduPilot / Arducopter", "Meshtastic", "AutoCAD", "Payload Mechanisms"],
+    externalUrl: "https://www.purduensds.org/home-1-1-1",
+    externalLabel: "NSDS Technical Projects",
+    placeholderIcon: RadioTower,
+    // Optional hero banner. Drop a file at this path to replace the placeholder.
+    heroImage: "/projects/nsds-hero.png",
+    galleryImages: [],
+    footerVideos: [],
+    // Hexacopter build photos and payload mechanism CAD (pending team photos).
+    // Drop files at these exact paths to replace the placeholders.
+    gallery: [
+      { src: "/projects/nsds-hexacopter-build.png", caption: "Hexacopter build" }, // drone construction photos
+      { src: "/projects/nsds-payload-mechanism.png", caption: "Payload mechanism CAD" }, // payload deployment mechanism CAD
+    ],
+    galleryLabel: "Build (coming soon)",
+    sections: [
+      {
+        heading: "The Problem",
+        paragraphs: [
+          "When a hurricane takes down communications infrastructure, first responders need radio coverage back before repair crews can reach damaged towers. Rapid Radio Development (RRD) is the Purdue National Security & Defense Society's answer: a hexacopter that places self-sufficient Meshtastic radio repeaters on elevated structures like water towers, built in partnership with the Emergency Response Team in Jefferson County, Florida.",
+        ],
+      },
+      {
+        heading: "My Role",
+        paragraphs: [
+          "I work on the Unmanned Systems team across the mechanical and integration side: drone construction, the modular payload deployment mechanism that releases the repeater package, and autopilot integration with ArduPilot and Arducopter. I also produce the mechanical Tooling Build-to-Packages and engineering drawings the system needs to meet structural durability requirements, and design flight-controller mounts that keep firmware compatible across microcontrollers and ESCs.",
+        ],
+      },
+      {
+        heading: "Status",
+        paragraphs: [
+          "The system is being prepared for field testing in Florida.",
+        ],
+      },
+    ],
+  },
+  {
     id: 9,
     comingSoon: true,
   },
@@ -438,17 +653,28 @@ export const ProjectDetail = () => {
           <p className="text-muted-foreground text-lg max-w-2xl">
             {project.description}
           </p>
+
+          {/* Prominent external link near the top */}
+          {project.externalUrl && (
+            <a
+              href={project.externalUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="cosmic-button inline-flex items-center gap-2 mt-6"
+            >
+              {project.externalLabel ?? "Visit Site"}
+              <ExternalLink size={16} />
+            </a>
+          )}
         </div>
 
-        {/* Hero image */}
-        {project.heroImage && (
-          <div className="w-full rounded-lg overflow-hidden mb-12 shadow-xs max-h-96">
-            <img
-              src={project.heroImage}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Hero image (real file if present, otherwise a design-system placeholder) */}
+        {(project.heroImage || project.placeholderIcon) && (
+          <HeroMedia
+            src={project.heroImage}
+            title={project.title}
+            Icon={project.placeholderIcon}
+          />
         )}
 
         {/* Main content: sections (left) + sidebar with CAD images (right) */}
@@ -482,31 +708,45 @@ export const ProjectDetail = () => {
                 {project.sidebarLabel}
               </p>
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
+                {(project.sidebarItems ?? project.tags).map((item) => (
                   <span
-                    key={tag}
+                    key={item}
                     className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground"
                   >
-                    {tag}
+                    {item}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* GitHub link */}
-            {project.githubUrl && (
+            {/* External / GitHub links */}
+            {(project.externalUrl || project.githubUrl) && (
               <div className="bg-card rounded-lg p-5 border border-border">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
                   Links
                 </p>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300"
-                >
-                  GitHub Repo
-                </a>
+                <div className="flex flex-col gap-2">
+                  {project.externalUrl && (
+                    <a
+                      href={project.externalUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300"
+                    >
+                      {project.externalLabel ?? "Visit Site"}
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-foreground/70 hover:text-primary transition-colors duration-300"
+                    >
+                      GitHub Repo
+                    </a>
+                  )}
+                </div>
               </div>
             )}
 
@@ -552,6 +792,25 @@ export const ProjectDetail = () => {
           </div>
 
         </div>
+
+        {/* Image gallery: real files if present, otherwise design-system placeholders */}
+        {project.gallery?.length > 0 && (
+          <div className="mt-16">
+            <p className="text-sm font-semibold text-foreground uppercase tracking-widest mb-4">
+              {project.galleryLabel ?? "Gallery"}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {project.gallery.map((item, i) => (
+                <ImageSlot
+                  key={i}
+                  src={item.src}
+                  caption={item.caption}
+                  Icon={project.placeholderIcon}
+                />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Engine / project specs */}
         {project.specs?.length > 0 && (
