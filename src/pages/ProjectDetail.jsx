@@ -484,13 +484,13 @@ const projects = [
       {
         heading: "About the Project",
         paragraphs: [
-          "Most trading bots react to price movements. Earnings Trader reads what companies actually say. The system pulls 8-K filings from SEC EDGAR and earnings data from Yahoo Finance, then uses GPT-4o-mini to score each filing for sentiment, guidance quality, and risk flags. Every scored signal is stored and backtested.",
+          "Most trading bots react to price movements. Earnings Trader reads what companies actually say. The system pulls 8-K filings from SEC EDGAR and earnings data from Yahoo Finance, then uses GPT-4o-mini to score each filing for sentiment, guidance quality, and risk flags. Every scored signal is stored and backtested. The pipeline runs itself on scheduled CI, ingesting new filings nightly and redeploying this dashboard.",
         ],
       },
       {
         heading: "Backtesting",
         paragraphs: [
-          "The backtesting engine is built on vectorbt and measures every signal against an SPY benchmark: Sharpe ratio, win rate, average return per trade, and max drawdown across a 34-trade backtest covering 10 tickers and 50+ signals. Results publish to a live FastAPI and React dashboard.",
+          "The backtesting engine is built on vectorbt and measures every signal against an SPY benchmark: Sharpe ratio, win rate, average return per trade, and max drawdown across a 35+ trade backtest covering 10 tickers and 50+ signals. Results publish to a live FastAPI and React dashboard.",
         ],
       },
       {
