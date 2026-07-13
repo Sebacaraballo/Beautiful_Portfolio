@@ -18,6 +18,7 @@ const featuredProjects = [
         icon: TrendingUp,
         tags: ["Personal", "AI", "Fintech"],
         link: "/projects/earnings-trader",
+        githubUrl: "https://github.com/Sebacaraballo/Trading-Bot",
     },
     {
         id: "algoma",
@@ -190,6 +191,16 @@ export const ProjectsSection = () => {
                                         <ProjectLink href={project.link}>
                                             <ExternalLink size={20} />
                                         </ProjectLink>
+                                        {project.githubUrl && (
+                                            <a
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                            >
+                                                <GithubIcon size={20} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
