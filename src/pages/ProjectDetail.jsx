@@ -84,12 +84,28 @@ const ImageSlot = ({ src, caption, Icon }) => {
 };
 
 // Hero banner variant of ImageSlot: full width, taller placeholder.
-const HeroMedia = ({ src, title, Icon }) => {
+// fit="contain" centers a logo on a light background (bg) instead of a
+// full-bleed cover image, so a transparent-background wordmark stays legible.
+const HeroMedia = ({ src, title, Icon, fit = "cover", bg = "bg-card" }) => {
   const [failed, setFailed] = useState(!src);
   if (failed) {
     return (
       <div className="w-full h-72 md:h-80 rounded-lg overflow-hidden mb-12 shadow-xs flex items-center justify-center bg-gradient-to-br from-primary/25 via-primary/10 to-card">
         {Icon && <Icon className="h-20 w-20 text-primary/70" strokeWidth={1.5} />}
+      </div>
+    );
+  }
+  if (fit === "contain") {
+    return (
+      <div
+        className={`w-full h-56 md:h-64 rounded-lg overflow-hidden mb-12 shadow-xs flex items-center justify-center p-8 md:p-12 ${bg}`}
+      >
+        <img
+          src={src}
+          alt={title}
+          className="max-w-full max-h-full object-contain"
+          onError={() => setFailed(true)}
+        />
       </div>
     );
   }
@@ -512,8 +528,12 @@ const projects = [
     externalUrl: "https://www.algoma.co/",
     externalLabel: "Visit Algoma",
     placeholderIcon: Building2,
-    // Optional hero banner. Drop a file at this path to replace the placeholder.
+    // Hero banner: the algoma wordmark (transparent PNG) centered on a light
+    // brand background, since the logo art is dark and would vanish on the
+    // dark page.
     heroImage: "/projects/algoma-hero.png",
+    heroFit: "contain",
+    heroBg: "bg-[#efece7]",
     galleryImages: [],
     footerVideos: [],
     // Rent comparables dashboard screenshot (pending company approval to publish).
@@ -674,6 +694,8 @@ export const ProjectDetail = () => {
             src={project.heroImage}
             title={project.title}
             Icon={project.placeholderIcon}
+            fit={project.heroFit}
+            bg={project.heroBg}
           />
         )}
 
