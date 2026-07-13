@@ -24,6 +24,7 @@ const featuredProjects = [
         id: "algoma",
         title: "Algoma",
         description: "Software engineering intern, two summers, at an AI platform for real estate feasibility. Built the rent comparables analytics dashboard from Figma prototypes to production: interactive charts with trend lines and dynamic filtering. Now shipping features through ticketed PRs and code review.",
+        imageUrl: "/projects/algoma-logo.webp",
         icon: Building2,
         tags: ["Internship", "Software"],
         link: "/projects/algoma",
