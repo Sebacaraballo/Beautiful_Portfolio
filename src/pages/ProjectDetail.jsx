@@ -75,7 +75,7 @@ const ImageSlot = ({ src, caption, Icon }) => {
         <img
           src={src}
           alt={caption || ""}
-          className="w-full h-[460px] object-contain bg-card"
+          className="w-full h-auto max-h-[500px] object-contain bg-card"
           onError={() => setFailed(true)}
         />
       )}
@@ -476,10 +476,10 @@ const projects = [
     footerVideos: [],
     // Dashboard screenshots. Drop files at these exact paths to replace placeholders.
     gallery: [
-      { src: "/projects/earnings-trader-dashboard.png", caption: "Dashboard overview" }, // live FastAPI + React dashboard
+      { src: "/projects/earnings-trader-signal.png", caption: "Signal breakdown" }, // per-ticker 8-K signal: bull/bear case, confidence, risk flags
       { src: "/projects/earnings-trader-backtest.png", caption: "Backtest results" }, // vectorbt backtest vs SPY
     ],
-    galleryLabel: "Dashboard (coming soon)",
+    galleryLabel: "Signals & Backtest",
     sections: [
       {
         heading: "About the Project",
@@ -799,7 +799,11 @@ export const ProjectDetail = () => {
             <p className="text-sm font-semibold text-foreground uppercase tracking-widest mb-4">
               {project.galleryLabel ?? "Gallery"}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${
+                project.gallery.length >= 3 ? "lg:grid-cols-3" : ""
+              }`}
+            >
               {project.gallery.map((item, i) => (
                 <ImageSlot
                   key={i}

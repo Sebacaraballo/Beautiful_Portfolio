@@ -14,6 +14,7 @@ const featuredProjects = [
         id: "earnings-trader",
         title: "Earnings Trader",
         description: "LLM system that reads SEC 8-K filings and turns earnings language into trade signals: GPT-4o-mini scores sentiment, guidance quality, and risk, then a vectorbt engine backtests every signal against SPY with Sharpe, win rate, and drawdown. Live FastAPI + React dashboard.",
+        imageUrl: "/projects/earnings-trader-hero.png",
         icon: TrendingUp,
         tags: ["Personal", "AI", "Fintech"],
         link: "/projects/earnings-trader",
