@@ -837,9 +837,10 @@ export const ProjectDetail = () => {
                   >
                     <video
                       src={item.video}
-                      controls
+                      autoPlay
+                      muted
+                      loop
                       playsInline
-                      preload="metadata"
                       aria-label={item.caption}
                       className="w-full h-auto max-h-[560px]"
                     >
