@@ -49,6 +49,9 @@ const featuredProjects = [
         id: "nsds",
         title: "Rapid Radio Development (Purdue NSDS)",
         description: "Unmanned Systems team project: a hexacopter that places self-sufficient Meshtastic radio repeaters on water towers to restore communications after natural disasters, partnered with emergency responders in Jefferson County, Florida. I work on drone construction, the payload deployment mechanism, and ArduPilot integration.",
+        imageUrl: "/projects/nsds-logo.png",
+        imageFit: "contain",
+        imageBg: "bg-[#e9eaec]",
         icon: RadioTower,
         tags: ["Purdue", "Club", "UAV"],
         link: "/projects/nsds",
@@ -151,12 +154,20 @@ export const ProjectsSection = () => {
                             key={key}
                             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
                         >
-                            <div className="h-48 overflow-hidden">
+                            <div
+                                className={`h-48 overflow-hidden ${
+                                    project.imageFit === "contain" ? project.imageBg ?? "bg-card" : ""
+                                }`}
+                            >
                                 {project.imageUrl ? (
                                     <img
                                         src={project.imageUrl}
                                         alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${
+                                            project.imageFit === "contain"
+                                                ? "object-contain p-6"
+                                                : "object-cover"
+                                        }`}
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/25 via-primary/10 to-card transition-transform duration-500 group-hover:scale-110">
