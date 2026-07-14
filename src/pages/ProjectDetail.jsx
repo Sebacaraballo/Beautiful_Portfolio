@@ -536,12 +536,11 @@ const projects = [
     heroBg: "bg-[#efece7]",
     galleryImages: [],
     footerVideos: [],
-    // Rent comparables dashboard screenshot (pending company approval to publish).
-    // Drop a file at this exact path to replace the placeholder.
+    // Rent comparables dashboard, shown as a short silent screen recording.
     gallery: [
-      { src: "/projects/algoma-rent-comparables.png", caption: "Rent comparables dashboard" },
+      { video: "/projects/algoma-rent-comparables.mp4", caption: "Rent comparables in action" },
     ],
-    galleryLabel: "Work (pending approval)",
+    galleryLabel: "Work",
     sections: [
       {
         heading: "About Algoma",
@@ -822,18 +821,40 @@ export const ProjectDetail = () => {
               {project.galleryLabel ?? "Gallery"}
             </p>
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${
-                project.gallery.length >= 3 ? "lg:grid-cols-3" : ""
+              className={`grid grid-cols-1 gap-6 ${
+                project.gallery.length === 1
+                  ? ""
+                  : project.gallery.length >= 3
+                  ? "sm:grid-cols-2 lg:grid-cols-3"
+                  : "sm:grid-cols-2"
               }`}
             >
-              {project.gallery.map((item, i) => (
-                <ImageSlot
-                  key={i}
-                  src={item.src}
-                  caption={item.caption}
-                  Icon={project.placeholderIcon}
-                />
-              ))}
+              {project.gallery.map((item, i) =>
+                item.video ? (
+                  <div
+                    key={i}
+                    className="rounded-lg overflow-hidden shadow-xs border border-border bg-card"
+                  >
+                    <video
+                      src={item.video}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      aria-label={item.caption}
+                      className="w-full h-auto max-h-[560px]"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ) : (
+                  <ImageSlot
+                    key={i}
+                    src={item.src}
+                    caption={item.caption}
+                    Icon={project.placeholderIcon}
+                  />
+                )
+              )}
             </div>
           </div>
         )}
