@@ -572,13 +572,11 @@ const projects = [
     heroImage: "/projects/nsds-hero.png",
     galleryImages: [],
     footerVideos: [],
-    // Hexacopter build photos and payload mechanism CAD (pending team photos).
-    // Drop files at these exact paths to replace the placeholders.
     gallery: [
-      { src: "/projects/nsds-hexacopter-build.png", caption: "Hexacopter build" }, // drone construction photos
-      { src: "/projects/nsds-payload-mechanism.png", caption: "Payload mechanism CAD" }, // payload deployment mechanism CAD
+      { src: "/projects/nsds-build.jpg", caption: "Unmanned Systems team airframe build session" },
+      { src: "/projects/nsds-avionics-enclosure.png", caption: "Avionics enclosure CAD" },
     ],
-    galleryLabel: "Build (coming soon)",
+    galleryLabel: "Build",
     sections: [
       {
         heading: "The Problem",
