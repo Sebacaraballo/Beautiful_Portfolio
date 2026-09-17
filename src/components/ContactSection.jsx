@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useRef } from "react";
@@ -74,20 +74,6 @@ export const ContactSection = () => {
                                         className="text-muted-foreground hover:text-primary transition-colors"
                                     >
                                         scarabal@purdue.edu
-                                    </a>
-                                </div>
-                            </div>
-                             <div className="flex items-start space-x-4">
-                                <div className="p-3 rounded-full bg-primary/10">
-                                    <Phone className="h-6 w-6 text-primary" /> {""}
-                                </div>
-                                <div className="">
-                                    <h4 className="font-medium"> Phone</h4>
-                                    <a 
-                                        href="tel:+13059988601" 
-                                        className="text-muted-foreground hover:text-primary transition-colors"
-                                    >
-                                        +1 (305) 998-8601
                                     </a>
                                 </div>
                             </div>
