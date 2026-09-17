@@ -67,7 +67,7 @@ const categories = ["all", "languages", "technologies", "equipment"];
 
 
 export const SkillsSection = () => {
-    const [activeCategory, setActiveCategory] = useState(null);
+    const [activeCategory, setActiveCategory] = useState("all");
 
     const filteredSkills = activeCategory === null
         ? []
