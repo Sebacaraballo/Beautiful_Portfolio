@@ -434,7 +434,7 @@ const projects = [
     id: "fitscript",
     title: "FitScript",
     description: "AI nutrition coach for people managing diabetes and GLP-1 treatment.",
-    tags: ["Founder", "AI", "Full-Stack", "Live Product"],
+    tags: ["Founder", "AI", "Full-Stack", "Building in Public"],
     githubUrl: null,
     sidebarLabel: "Tech Stack",
     sidebarItems: ["Next.js", "TypeScript", "PostgreSQL", "LLM APIs", "Vercel", "Sentry", "Resend"],
@@ -468,9 +468,9 @@ const projects = [
         ],
       },
       {
-        heading: "Private Beta",
+        heading: "What's Next",
         paragraphs: [
-          "It is in private beta with 60+ users. I run the beta like an experiment: SQL retention analytics on real meal and conversation data decide what gets built next, and features ship only when usage signals call for them.",
+          "FitScript is launching to private beta this fall, with 64 people on the waitlist. I plan to run the beta like an experiment: retention analytics on real meal and conversation data will decide what gets built next, and features will ship only when usage signals call for them.",
         ],
       },
     ],

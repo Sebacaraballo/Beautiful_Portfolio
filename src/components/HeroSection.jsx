@@ -32,7 +32,7 @@ export const HeroSection = () => {
                             Purdue University
                         </a>
                         {" "}
-                        studying Mechanical Engineering with a minor in Computer Science.
+                        studying Mechanical Engineering.
                         I founded{" "}
                         <a
                             href="https://fitscript.io"
